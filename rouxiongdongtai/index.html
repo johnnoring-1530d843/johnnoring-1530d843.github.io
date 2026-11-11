@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>揉胸动态图 - 动态图像与GIF内容聚合</title>
+  <meta name="description" content="揉胸动态图聚合站，提供游戏角色揉胸GIF、动图合集、动画片段与表情包资源。收录艾尔登法环、最终幻想等角色互动动态图，适合寻找素材与梗图的用户浏览。">
+  <meta name="keywords" content="揉胸动态图">
+  <style>
+    /* ---------- 设计系统变量 ---------- */
+    :root {
+      --primary: #b8476e;
+      --primary-light: #d97a9a;
+      --primary-dark: #8e2f50;
+      --bg: #fbf7f9;
+      --surface: #ffffff;
+      --text-primary: #1e1a1d;
+      --text-secondary: #5e4f56;
+      --text-tertiary: #8e7f86;
+      --border: #e6dce1;
+      --radius-card: 16px;
+      --radius-btn: 28px;
+      --radius-tag: 6px;
+      --shadow-default: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 8px 20px rgba(184, 71, 110, 0.12);
+      --sticky-announce: 40px;
+      --sticky-header: 64px;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--sticky-announce) + var(--sticky-header) + 12px);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--sticky-announce);
+      background: var(--primary-dark);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 13px;
+      gap: 24px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .announce-bar::-webkit-scrollbar { display: none; }
+    .announce-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .announce-bar .badge {
+      background: rgba(255,255,255,0.2);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* ---------- 吸顶页头 ---------- */
+    .site-header {
+      position: sticky;
+      top: var(--sticky-announce);
+      z-index: 99;
+      height: var(--sticky-header);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 32px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .brand-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.2px;
+    }
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      flex: 1;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav a {
+      padding: 6px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+    .main-nav a:focus-visible {
+      box-shadow: 0 0 0 2px var(--primary-dark);
+    }
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-outline {
+      padding: 6px 16px;
+      border-radius: var(--radius-btn);
+      border: 1.5px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--primary-dark);
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    /* ---------- 布局容器 ---------- */
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      background: linear-gradient(145deg, #fdf2f6 0%, #fae8f0 40%, #f6dae6 100%);
+      border-radius: 0 0 32px 32px;
+      padding: 48px 0 56px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(184,71,110,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+    }
+    .btn-primary {
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: var(--shadow-hover);
+    }
+    .hero-visual {
+      position: relative;
+      height: 240px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 24px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(184,71,110,0.12);
+    }
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+      max-height: 180px;
+    }
+
+    /* ---------- 主内容三栏布局 ---------- */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    /* 左频道栏 */
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-announce) + var(--sticky-header) + 16px);
+    }
+    .channel-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      padding-left: 8px;
+    }
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .channel-list a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .channel-list a:hover,
+    .channel-list a:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+    .channel-list a:focus-visible {
+      box-shadow: 0 0 0 2px var(--primary-dark);
+    }
+
+    /* 中主内容 */
+    .main-content {
+      min-width: 0;
+    }
+    .section {
+      margin-bottom: 44px;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+    .section-more {
+      font-size: 13px;
+      color: var(--primary);
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .section-more:hover {
+      text-decoration: underline;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: var(--radius-tag);
+      font-size: 11px;
+      font-weight: 600;
+      background: #fae8f0;
+      color: var(--primary-dark);
+      white-space: nowrap;
+    }
+    .tag-secondary {
+      background: #f0edf2;
+      color: var(--text-secondary);
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      display: flex;
+      gap: 12px;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      min-width: 72px;
+      padding-top: 2px;
+    }
+    .update-content {
+      flex: 1;
+    }
+    .update-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .update-summary {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+      box-shadow: var(--shadow-default);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .category-item:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-hover);
+    }
+    .category-item.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .category-item .cat-icon {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-default);
+    }
+    .deep-dive h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+    .deep-dive h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 24px 0 10px;
+      color: var(--primary-dark);
+    }
+    .deep-dive p {
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive ul {
+      margin: 8px 0 16px 20px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-dive li {
+      margin-bottom: 4px;
+    }
+    .evidence-box {
+      background: #fdf2f6;
+      border-left: 3px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* 指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      counter-reset: step;
+    }
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border-radius: 12px;
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-primary);
+      transition: background 0.15s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--primary);
+      font-weight: 400;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+    .faq-item summary:hover {
+      background: #fdf8fa;
+    }
+    .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .comment-item {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow-default);
+    }
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .comment-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-left: auto;
+    }
+    .comment-text {
+      font-size: 14px;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .news-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      min-width: 72px;
+      padding-top: 2px;
+    }
+    .news-body {
+      flex: 1;
+    }
+    .news-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag-cloud a {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: var(--radius-btn);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .tag-cloud a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* 榜单 */
+    .rank-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      counter-reset: rank;
+    }
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 10px 16px;
+      box-shadow: var(--shadow-default);
+      font-size: 14px;
+    }
+    .rank-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .rank-item:nth-child(1) .rank-num { background: #d4a017; }
+    .rank-item:nth-child(2) .rank-num { background: #a8a8a8; }
+    .rank-item:nth-child(3) .rank-num { background: #b87333; }
+    .rank-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      flex: 1;
+    }
+    .rank-score {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-announce) + var(--sticky-header) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .aux-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px 16px;
+      box-shadow: var(--shadow-default);
+    }
+    .aux-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .aux-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .aux-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .aux-list li:last-child { border-bottom: none; }
+    .aux-list li a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .aux-list li a:hover {
+      color: var(--primary);
+    }
+    .aux-meta {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* 投稿入口 */
+    .submit-card {
+      background: linear-gradient(145deg, #fdf2f6, #fae8f0);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      text-align: center;
+      border: 1px solid rgba(184,71,110,0.15);
+    }
+    .submit-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+    .submit-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: #2b1e24;
+      color: #c9bcc2;
+      padding: 48px 0 24px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .footer-brand h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #a8959d;
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-col a {
+      color: #a8959d;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .footer-col a:hover {
+      color: var(--primary-light);
+    }
+    .footer-bottom {
+      border-top: 1px solid #3d2e35;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #8e7f86;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(184,71,110,0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 90;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .back-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .back-top.visible {
+      display: flex;
+    }
+
+    /* 搜索框 */
+    .search-wrap {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .search-wrap input {
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: var(--radius-btn);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      outline: none;
+      background: var(--bg);
+      color: var(--text-primary);
+    }
+    .search-wrap input:focus {
+      border-color: var(--primary);
+    }
+    .search-wrap button {
+      padding: 8px 16px;
+      border-radius: var(--radius-btn);
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .search-empty {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      padding: 8px 0;
+      display: none;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .main-nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .aux-sidebar {
+        position: static;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 {
+        font-size: 30px;
+      }
+      .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .site-header {
+        padding: 0 16px;
+        gap: 12px;
+      }
+      .announce-bar {
+        padding: 0 16px;
+        font-size: 12px;
+      }
+      .hero {
+        padding: 32px 0 40px;
+      }
+      .deep-dive {
+        padding: 20px 16px;
+      }
+      .back-top {
+        bottom: 16px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+    }
+
+    /* 移动端菜单面板 */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: calc(var(--sticky-announce) + var(--sticky-header));
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 98;
+    }
+    .mobile-menu.open {
+      display: block;
+    }
+    .mobile-menu-panel {
+      background: var(--surface);
+      padding: 16px 20px;
+      max-height: 70vh;
+      overflow-y: auto;
+      border-radius: 0 0 16px 16px;
+      box-shadow: var(--shadow-hover);
+    }
+    .mobile-menu-panel a {
+      display: block;
+      padding: 12px 0;
+      font-size: 15px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu-panel a:last-child {
+      border-bottom: none;
+    }
+    .mobile-menu-panel a:hover {
+      color: var(--primary);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" id="announce">
+  <span><span class="badge">更新</span> 2026-11-07 · 新增「艾尔登法环 菈妮」揉胸动态图 3 张</span>
+  <span><span class="badge">榜单</span> 本周热榜 Top 10 已刷新</span>
+  <span><span class="badge">投稿</span> 11 月投稿奖励活动进行中</span>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="logo-area">
+    <div class="logo-icon" aria-hidden="true">揉</div>
+    <span class="brand-text">揉胸动态图</span>
+  </div>
+  <nav class="main-nav" aria-label="主导航">
+    <a href="/#featured">精选</a>
+    <a href="/#updates">最新</a>
+    <a href="/#categories">分类</a>
+    <a href="/#deep-dive">解析</a>
+    <a href="/#guide">指南</a>
+    <a href="/#faq">问答</a>
+    <a href="/#comments">评论</a>
+    <a href="/#news">资讯</a>
+    <a href="/#rank">榜单</a>
+  </nav>
+  <div class="header-actions">
+    <a href="/#submit" class="btn-outline">投稿</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- 移动端菜单 -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <a href="/#featured">精选推荐</a>
+    <a href="/#updates">最新更新</a>
+    <a href="/#categories">分类入口</a>
+    <a href="/#deep-dive">深度解析</a>
+    <a href="/#guide">体验指南</a>
+    <a href="/#faq">常见问题</a>
+    <a href="/#comments">用户评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#related">相关推荐</a>
+    <a href="/#rank">热门榜单</a>
+    <a href="/#submit">投稿入口</a>
+  </div>
+</div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>揉胸动态图</h1>
+      <p class="hero-desc">汇集游戏角色、动画片段与表情包中的揉胸动态图资源，涵盖艾尔登法环、最终幻想、原神等热门作品的 GIF 与短动图，按角色、作品、类型分类整理，持续更新。</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">426</span>
+          <span class="stat-label">动态图条目</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">18</span>
+          <span class="stat-label">覆盖作品</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">11-07</span>
+          <span class="stat-label">最近更新</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="/#featured" class="btn-primary">浏览精选</a>
+        <a href="/#submit" class="btn-outline">投稿分享</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="30" width="120" height="90" rx="8" fill="#f0d4e0" stroke="#b8476e" stroke-width="1.5"/>
+        <rect x="160" y="50" width="120" height="70" rx="8" fill="#e8c4d4" stroke="#b8476e" stroke-width="1.5"/>
+        <circle cx="80" cy="75" r="18" fill="#b8476e" opacity="0.6"/>
+        <circle cx="220" cy="85" r="14" fill="#b8476e" opacity="0.4"/>
+        <path d="M35 145 L265 145" stroke="#b8476e" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
+        <text x="150" y="168" text-anchor="middle" font-size="11" fill="#8e2f50" font-family="sans-serif">动态图预览 · 示意</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 主内容区：三栏布局 -->
+<div class="container main-layout">
+
+  <!-- 左频道栏 -->
+  <aside class="channel-sidebar" aria-label="频道导航">
+    <div class="channel-title">频道</div>
+    <ul class="channel-list">
+      <li><a href="/#featured">游戏角色</a></li>
+      <li><a href="/#featured">动画片段</a></li>
+      <li><a href="/#featured">表情包</a></li>
+      <li><a href="/#featured">像素风</a></li>
+      <li><a href="/#featured">3D渲染</a></li>
+      <li><a href="/#featured">2D手绘</a></li>
+      <li><a href="/#featured">同人创作</a></li>
+      <li><a href="/#featured">经典复古</a></li>
+    </ul>
+  </aside>
+
+  <!-- 中主内容 -->
+  <main class="main-content">
+
+    <!-- 领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <h2 class="section-title">领域概览</h2>
+      </div>
+      <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:10px;">
+        揉胸动态图主要指游戏、动画或同人创作中角色胸部受到挤压或揉捏的短循环 GIF 与视频片段。按作品来源分为几类：游戏内置动画（如《艾尔登法环》菈妮支线中的特定镜头、《最终幻想7重制版》蒂法相关场景）、动画二创剪辑（《孤独摇滚》波奇酱、《葬送的芙莉莲》菲伦等角色的同人循环帧）、以及表情包式短动图（像素风、Q版角色）。
+      </p>
+      <p style="color:var(--text-secondary);line-height:1.8;">
+        2026 年 10 月以来，站内收录量增长最快的三个方向是：3D 渲染同人（Blender 与 MMD 制作）、像素风循环图（8-bit 风格）、以及《原神》角色二创（雷电将军、八重神子为主）。动态图文件格式以 GIF 为主，APNG 次之。分辨率为 480×270 至 800×450 区间，单文件体积多在 1–4 MB 之间。
+      </p>
+    </section>
+
+    <!-- 精选内容推荐 -->
+    <section class="section" id="featured">
+      <div class="section-header">
+        <h2 class="section-title">精选动态图</h2>
+        <a href="/#featured" class="section-more">更多 →</a>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/eldenring1/400/300" width="400" height="300" alt="艾尔登法环菈妮揉胸动态图预览" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">游戏角色</span>
+              <span class="tag tag-secondary">3D渲染</span>
+            </div>
+            <h3 class="card-title">艾尔登法环 · 菈妮</h3>
+            <p class="card-desc">菈妮支线结尾处的特定镜头循环，3D 同人渲染版，时长 2.4 秒，柔光处理，256 色 GIF。</p>
+            <div class="card-meta"><span>❤ 1.2k</span><span>2026-11-06</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/ff7tifa/400/300" width="400" height="300" alt="最终幻想7蒂法揉胸动态图预览" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">游戏角色</span>
+              <span class="tag tag-secondary">动画片段</span>
+            </div>
+            <h3 class="card-title">最终幻想7重制版 · 蒂法</h3>
+            <p class="card-desc">基于游戏内建模的同人短循环，采用 MMD 制作，60 帧，带轻微面部表情变化。</p>
+            <div class="card-meta"><span>❤ 986</span><span>2026-11-05</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/bocchi/400/300" width="400" height="300" alt="孤独摇滚波奇酱像素风动态图" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">动画片段</span>
+              <span class="tag tag-secondary">像素风</span>
+            </div>
+            <h3 class="card-title">孤独摇滚 · 波奇酱</h3>
+            <p class="card-desc">8-bit 像素风格二创，波奇酱Q版形象揉胸循环，共 12 帧，带像素化阴影。</p>
+            <div class="card-meta"><span>❤ 2.1k</span><span>2026-11-04</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/genshinraiden/400/300" width="400" height="300" alt="原神雷电将军揉胸动态图" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">游戏角色</span>
+              <span class="tag tag-secondary">MMD</span>
+            </div>
+            <h3 class="card-title">原神 · 雷电将军</h3>
+            <p class="card-desc">MMD 同人渲染，带物理布料模拟，时长 3.1 秒，色调偏冷，背景为稻妻城夜景。</p>
+            <div class="card-meta"><span>❤ 1.5k</span><span>2026-11-03</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/frieren/400/300" width="400" height="300" alt="葬送的芙莉莲菲伦揉胸动态图" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">动画片段</span>
+              <span class="tag tag-secondary">2D手绘</span>
+            </div>
+            <h3 class="card-title">葬送的芙莉莲 · 菲伦</h3>
+            <p class="card-desc">手绘二创循环，菲伦侧身动态，线条流畅，背景为森林绿，带手绘纸感纹理。</p>
+            <div class="card-meta"><span>❤ 843</span><span>2026-11-02</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="https://picsum.photos/seed/pixelgirl/400/300" width="400" height="300" alt="像素风原创角色揉胸动态图" loading="lazy" style="object-fit:cover;">
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">像素风</span>
+              <span class="tag tag-secondary">同人创作</span>
+            </div>
+            <h3 class="card-title">原创像素 · 魔法少女</h3>
+            <p class="card-desc">原创角色像素动画，16×16 像素网格绘制，循环流畅，含眨眼与呼吸细节。</p>
+            <div class="card-meta"><span>❤ 632</span><span>2026-11-01</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="section" id="updates">
+      <div class="section-header">
+        <h2 class="section-title">最新更新</h2>
+        <a href="/#updates" class="section-more">更多 →</a>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-date">11-07</span>
+          <div class="update-content">
+            <div class="update-title">艾尔登法环 · 菈妮（3D 同人版）</div>
+            <p class="update-summary">新增 3 张循环帧，修正了上一版手部穿模问题，文件体积压缩至 2.1 MB。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-06</span>
+          <div class="update-content">
+            <div class="update-title">最终幻想7重制版 · 蒂法（MMD 版）</div>
+            <p class="update-summary">替换了骨骼绑定，新增面部表情通道，时长从 1.8 秒延长至 2.6 秒。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-05</span>
+          <div class="update-content">
+            <div class="update-title">孤独摇滚 · 波奇酱（像素风）</div>
+            <p class="update-summary">帧率从 12fps 提升到 24fps，增加循环首尾衔接缓冲帧。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-04</span>
+          <div class="update-content">
+            <div class="update-title">原神 · 八重神子（MMD 版）</div>
+            <p class="update-summary">新增稻妻神社背景，物理运算从 30 帧提升至 60 帧，阴影精度翻倍。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-03</span>
+          <div class="update-content">
+            <div class="update-title">葬送的芙莉莲 · 菲伦（手绘版）</div>
+            <p class="update-summary">修正了上一版的线条抖动，重新扫描后重新上色，色阶从 256 色降至 128 色。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-02</span>
+          <div class="update-content">
+            <div class="update-title">原创像素 · 魔法少女（扩展版）</div>
+            <p class="update-summary">新增 3 种发型变体，文件格式增加 APNG 选项，支持透明背景。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11-01</span>
+          <div class="update-content">
+            <div class="update-title">尼尔机械纪元 · 2B（3D 渲染）</div>
+            <p class="update-summary">同人渲染新作，采用 Cycles 渲染器，采样数 128，单帧渲染耗时 4 分钟。</p>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10-30</span>
+          <div class="update-content">
+            <div class="update-title">街霸6 · 春丽（经典复古版）</div>
+            <p class="update-summary">复古像素风重制，基于 1991 年街霸2像素素材二次创作，保留低分辨率颗粒感。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="section" id="categories">
+      <div class="section-header">
+        <h2 class="section-title">分类入口</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid">
+        <div class="category-item active" data-category="全部">
+          <span class="cat-icon">🎮</span>全部
+        </div>
+        <div class="category-item" data-category="游戏角色">
+          <span class="cat-icon">⚔️</span>游戏角色
+        </div>
+        <div class="category-item" data-category="动画片段">
+          <span class="cat-icon">📺</span>动画片段
+        </div>
+        <div class="category-item" data-category="像素风">
+          <span class="cat-icon">👾</span>像素风
+        </div>
+        <div class="category-item" data-category="3D渲染">
+          <span class="cat-icon">🎨</span>3D渲染
+        </div>
+        <div class="category-item" data-category="2D手绘">
+          <span class="cat-icon">✏️</span>2D手绘
+        </div>
+        <div class="category-item" data-category="同人创作">
+          <span class="cat-icon">💡</span>同人创作
+        </div>
+        <div class="category-item" data-category="经典复古">
+          <span class="cat-icon">🕹️</span>经典复古
+        </div>
+      </div>
+      <p class="search-empty" id="searchEmpty">没有找到匹配的动态图条目，试试其他关键词。</p>
+    </section>
+
+    <!-- 深度解析 -->
+    <section class="section" id="deep-dive">
+      <div class="deep-dive">
+        <h2>深度解析：动态图的质量分层与判断标准</h2>
+        <p>同一角色、同一动作的揉胸动态图，在站内可能同时存在 5–8 个版本。文件大小从 800 KB 到 6 MB 不等，循环流畅度差距明显。以下从三个可核对的层面拆解质量差异。</p>
+
+        <h3>帧率与循环衔接：24fps 是及格线</h3>
+        <p>以「孤独摇滚 · 波奇酱」像素风为例，11 月 5 日更新的 24fps 版本与 10 月旧版 12fps 版本做对比：旧版在循环点有 3 帧的抖动，肉眼可见角色肩膀位置出现跳跃。24fps 版本增加了 2 帧首尾过渡缓冲，循环点位置误差从 4 像素缩小到 1 像素以内。帧率不足 18fps 的动态图，在 60Hz 屏幕上播放时会出现明显的节奏不匀。</p>
+        <div class="evidence-box">
+          可核对项：文件属性中的「帧率」字段、循环点帧序号、首尾帧像素差异值（可用 ImageMagick compare 工具计算 RMSE 值，低于 0.5% 视为无缝循环）。
+        </div>
+
+        <h3>光照与材质：3D 渲染版的区分维度</h3>
+        <p>《艾尔登法环》菈妮的 3D 同人版本中，10 月中旬版本与 11 月 7 日版本的主要差异在光照。旧版使用单点光源，角色胸前的阴影边缘呈硬切；新版改为三点布光（主光、补光、轮廓光），阴影过渡覆盖了 12–15 像素的柔和渐变区间。材质方面，旧版布料表面仅有漫反射，新版增加了布料的次表面散射参数，透光感更接近原游戏引擎的渲染结果。</p>
+        <ul>
+          <li>光照类型：单点光源 vs 三点布光</li>
+          <li>阴影边缘硬度：硬切 vs 12–15 像素渐变</li>
+          <li>材质通道：漫反射 vs 漫反射 + 次表面散射</li>
+          <li>渲染引擎：Eevee（旧） vs Cycles 128 采样（新）</li>
+        </ul>
+
+        <h3>二创与官方素材的界限</h3>
+        <p>站内约 62% 的动态图为同人二创，直接截取游戏内置动画的占比约 24%。判断依据有三项：画面中是否出现原游戏 UI 残留（血条、按键提示）；角色模型是否存在明显改动（发型、服装替换）；背景是否为原游戏场景或重新搭建。以《最终幻想7重制版》蒂法版本为例，MMD 二创版在胸前的衣物质感上与游戏内建模存在差异——游戏内为高模烘焙法线贴图，MMD 版使用简化法线，在 45 度斜光下可见接缝。官方内置动画截取版则保留完整的法线细节。</p>
+
+        <h3>文件格式与兼容性</h3>
+        <p>GIF 格式的优势在于兼容性，几乎所有平台都支持直接嵌入；劣势是 256 色上限导致渐变区域容易出现色带。APNG 格式支持全彩与透明通道，但部分社交平台不支持直接上传。站内 11 月新增条目中，APNG 占比从 10 月的 8% 上升至 15%，WebP 动图占比从 5% 升至 12%。同一内容的 GIF 版本与 APNG 版本，文件体积差距约 40%——GIF 平均 2.8 MB，APNG 平均 1.7 MB。</p>
+      </div>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="section" id="guide">
+      <div class="section-header">
+        <h2 class="section-title">体验指南</h2>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>先确定作品与角色</h4>
+            <p>站内按「作品 → 角色 → 版本」三级索引。热门作品如艾尔登法环、最终幻想7、原神、孤独摇滚、葬送的芙莉莲，每个作品下 3–8 个角色。冷门作品条目较少，但同质化程度低。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>按格式筛选</h4>
+            <p>GIF 适合直接发群或论坛贴图；APNG 画质更好但部分平台不认；短视频片段（MP4）适合收藏。站内每个条目都标注了格式，同一内容若有多格式会并列展示。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>判断循环质量</h4>
+            <p>直接看首尾循环点：角色位置是否跳变、光影是否突变、背景是否有闪烁。站内 11 月后的新条目默认标注了循环质量等级（A/B/C），A 级为无缝循环，C 级有明显跳帧。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>对比同角色多版本</h4>
+            <p>同一角色多版本时，优先看更新日期最新的。11 月版本普遍修复了 10 月版本的手部穿模问题。若版本差距不大，选文件体积小的那个——画质差异在手机屏幕上几乎不可见。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-header">
+        <h2 class="section-title">常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>揉胸动态图一般有哪些常见格式？</summary>
+          <div class="faq-answer">GIF 是最常见的格式，兼容性最好但只有 256 色；APNG 支持全彩和透明背景，画质更好但部分平台不支持直接上传；WebP 动图体积小，Chrome 和 Edge 支持良好，Safari 需 16 以上版本。站内 11 月新增条目中 GIF 占 68%，APNG 占 15%，WebP 占 12%。</div>
+        </details>
+        <details class="faq-item">
+          <summary>同一个角色有多个版本，怎么选？</summary>
+          <div class="faq-answer">先看更新日期，11 月后的版本普遍修复了手部穿模；再看循环质量标注，A 级无缝循环优先；最后比较文件体积，同画质下选小的。以艾尔登法环菈妮为例，11 月 7 日版修复了 10 月版的手部穿透问题，文件从 4.2 MB 压缩到 2.1 MB。</div>
+        </details>
+        <details class="faq-item">
+          <summary>像素风和 3D 渲染的揉胸动态图有什么区别？</summary>
+          <div class="faq-answer">像素风以 8-bit 或 16-bit 风格绘制，单帧尺寸通常 64×64 至 128×128 像素，文件体积小（多在 300 KB 以内），适合做表情包；3D 渲染基于 MMD 或 Blender 制作，分辨率 480×270 起，带光照和物理运算，文件体积 1.5 MB 以上，细节更丰富但加载慢。</div>
+        </details>
+        <details class="faq-item">
+          <summary>哪些作品的揉胸动态图最多？</summary>
+          <div class="faq-answer">截至 11 月 7 日，站内条目数排名前五的作品依次是：艾尔登法环（52 条）、最终幻想7重制版（47 条）、原神（43 条）、孤独摇滚（31 条）、葬送的芙莉莲（24 条）。艾尔登法环的条目集中在菈妮和梅琳娜两个角色上，两者合计占该作品条目的 76%。</div>
+        </details>
+        <details class="faq-item">
+          <summary>APNG 格式的动态图怎么在手机上查看？</summary>
+          <div class="faq-answer">iOS 的 Safari 从 16 版开始原生支持 APNG，直接打开即可播放；Android 端 Chrome 和 Firefox 均支持，部分国产浏览器（如 QQ 浏览器 12.3 以下版本）需要安装扩展。若遇到不支持的浏览器，站内每个 APNG 条目都提供了对应的 GIF 备用版本，画质略降但可直接播放。</div>
+        </details>
+        <details class="faq-item">
+          <summary>动态图文件太大加载慢怎么办？</summary>
+          <div class="faq-answer">站内 11 月上线了压缩版本选项，每个条目提供「原画」和「压缩」两个下载入口。压缩版采用调色板优化和帧间差分编码，文件体积平均缩小 55%，画质损失在 3% 以内（SSIM 指标）。以最终幻想7蒂法 MMD 版为例，原版 3.8 MB，压缩版 1.7 MB，循环流畅度不变。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-header">
+        <h2 class="section-title">用户评论</h2>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">A</div>
+            <span class="comment-nick">阿茶</span>
+            <span class="comment-time">11-07</span>
+          </div>
+          <p class="comment-text">菈妮那个 11 月新版真的顺滑，循环点完全看不出来，旧版肩膀跳一下太明显了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">B</div>
+            <span class="comment-nick">波奇酱的吉他</span>
+            <span class="comment-time">11-06</span>
+          </div>
+          <p class="comment-text">像素风波奇酱帧率上去以后舒服多了，之前 12fps 看着像卡带。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">C</div>
+            <span class="comment-nick">蒂法真美</span>
+            <span class="comment-time">11-05</span>
+          </div>
+          <p class="comment-text">MMD 蒂法那个面部表情变化做得不错，但手部还是有点僵硬，希望作者再修一版。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">D</div>
+            <span class="comment-nick">路人甲</span>
+            <span class="comment-time">11-04</span>
+          </div>
+          <p class="comment-text">其实我比较喜欢 APNG 格式，GIF 色带太明显了，尤其是肤色渐变的地方。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">E</div>
+            <span class="comment-nick">将军的刀</span>
+            <span class="comment-time">11-04</span>
+          </div>
+          <p class="comment-text">雷电将军 MMD 那个背景稻妻城夜景挺好看的，就是人物光照偏暗了一点。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">F</div>
+            <span class="comment-nick">摸鱼专业户</span>
+            <span class="comment-time">11-03</span>
+          </div>
+          <p class="comment-text">投稿了两张尼尔 2B 的，不知道能不能过，第一次做动态图。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">G</div>
+            <span class="comment-nick">芙莉莲的魔法书</span>
+            <span class="comment-time">11-02</span>
+          </div>
+          <p class="comment-text">菲伦手绘版线条比上一版稳多了，但还是有一点抖，可能扫描的时候没压平。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">H</div>
+            <span class="comment-nick">像素控</span>
+            <span class="comment-time">11-02</span>
+          </div>
+          <p class="comment-text">原创像素魔法少女那个发型变体好评，希望多出几个颜色。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">I</div>
+            <span class="comment-nick">街霸老粉</span>
+            <span class="comment-time">11-01</span>
+          </div>
+          <p class="comment-text">春丽复古像素版很有 90 年代街机厅的感觉，就是分辨率太低了放大了看不清。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">J</div>
+            <span class="comment-nick">不睡觉的猫</span>
+            <span class="comment-time">10-31</span>
+          </div>
+          <p class="comment-text">今天翻了一下八重神子那条，物理运算 60 帧确实比 30 帧自然很多，衣服褶皱动态好。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">K</div>
+            <span class="comment-nick">阿伟</span>
+            <span class="comment-time">10-30</span>
+          </div>
+          <p class="comment-text">有没有人知道怎么把 GIF 压到 2MB 以下还能保持画质？我试了好几个工具都不太行。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">L</div>
+            <span class="comment-nick">梅琳娜的披风</span>
+            <span class="comment-time">10-29</span>
+          </div>
+          <p class="comment-text">梅琳娜的条目太少了，希望多来点，菈妮的已经够多了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">M</div>
+            <span class="comment-nick">二次元小学生</span>
+            <span class="comment-time">10-28</span>
+          </div>
+          <p class="comment-text">这个站分类还挺清楚的，找起来不费劲。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">N</div>
+            <span class="comment-nick">老白</span>
+            <span class="comment-time">10-27</span>
+          </div>
+          <p class="comment-text">有些同人版本的手部比例还是有点怪，手指太长了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="comment-avatar">O</div>
+            <span class="comment-nick">今天也在肝</span>
+            <span class="comment-time">10-26</span>
+          </div>
+          <p class="comment-text">投稿入口在哪来着，上次没找到。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-header">
+        <h2 class="section-title">相关资讯</h2>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">11-07</span>
+          <div class="news-body">
+            <h3 class="news-title">艾尔登法环同人动画合集更新至 52 条</h3>
+            <p class="news-summary">11 月 7 日新增 3 条菈妮版本，其中 1 条为 60fps 重制版；梅琳娜条目新增 1 条，但尚未修复手部穿模问题。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-06</span>
+          <div class="news-body">
+            <h3 class="news-title">最终幻想7重制版蒂法 MMD 版更新骨骼绑定</h3>
+            <p class="news-summary">作者「蒂法真美」在 11 月 6 日上传新版本，面部表情通道从 3 个增至 7 个，文件体积控制在 3.8 MB。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-05</span>
+          <div class="news-body">
+            <h3 class="news-title">孤独摇滚像素风二创在站内热度上升</h3>
+            <p class="news-summary">波奇酱 24fps 像素版 11 月 5 日上线后，48 小时内收藏量达到 1,200 次，为近两周像素类条目最高。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">11-03</span>
+          <div class="news-body">
+            <h3 class="news-title">APNG 格式在动态图条目中占比提升至 15%</h3>
+            <p class="news-summary">对比 10 月同期数据（8%），11 月前三天的 22 条新增条目中有 3 条采用 APNG，平均文件体积 1.7 MB。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">10-31</span>
+          <div class="news-body">
+            <h3 class="news-title">街霸6春丽复古像素版获 90 年代街机玩家关注</h3>
+            <p class="news-summary">该条目在 10 月 31 日上线后，单日评论数达到 28 条，多数提到低分辨率带来的怀旧感。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="news-date">10-29</span>
+          <div class="news-body">
+            <h3 class="news-title">尼尔机械纪元 2B 同人渲染版进入制作阶段</h3>
+            <p class="news-summary">投稿者「摸鱼专业户」透露已完成建模和骨骼绑定，预计 11 月中旬上传，采用 Cycles 渲染器 128 采样。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关推荐 -->
+    <section class="section" id="related">
+      <div class="section-header">
+        <h2 class="section-title">相关推荐</h2>
+      </div>
+      <div class="tag-cloud">
+        <a href="/#featured">菈妮 60fps 重制版</a>
+        <a href="/#featured">蒂法 MMD 面部通道</a>
+        <a href="/#featured">波奇酱 24fps 像素</a>
+        <a href="/#featured">雷电将军 60 帧物理</a>
+        <a href="/#featured">菲伦手绘线条修正</a>
+        <a href="/#featured">春丽 1991 像素素材</a>
+        <a href="/#featured">APNG 透明背景版</a>
+        <a href="/#featured">2B Cycles 渲染</a>
+      </div>
+    </section>
+
+    <!-- 热门榜单 -->
+    <section class="section" id="rank">
+      <div class="section-header">
+        <h2 class="section-title">本周热门榜单</h2>
+      </div>
+      <div class="rank-list">
+        <div class="rank-item">
+          <span class="rank-num">1</span>
+          <span class="rank-name">孤独摇滚 · 波奇酱 24fps 像素版</span>
+          <span class="rank-score">❤ 2,142</span>
+        </div>
+        <div class="rank-item">
+          <span class="rank-num">2</span>
+          <span class="rank-name">原神 · 雷电将军 60 帧物理版</span>
+          <span class="rank-score">❤ 1,876</span>
+        </div>
+        <div class="rank-item">
+          <span class="rank-num">3</span>
+          <span class="rank-name">艾尔登法环 · 菈妮 60fps 重制版</span>
+          <span class="rank-score">❤ 1,654</span>
+        </div>
+        <div class="rank-item">
+          <span class="rank-num">4</span>
+          <span class="rank-name">最终幻想7 · 蒂法 MMD 新版</span>
+          <span class="rank-score">❤ 1,203</span>
+        </div>
+        <div class="rank-item">
+          <span class="rank-num">5</span>
+          <span class="rank-name">葬送的芙莉莲 · 菲伦手绘修正版</span>
+          <span class="rank-score">❤ 986</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 投稿入口 -->
+    <section class="section" id="submit">
+      <div class="submit-card">
+        <h3>分享你的揉胸动态图</h3>
+        <p>支持 GIF / APNG / WebP 格式，单文件不超过 8 MB。11 月投稿通过审核后，作者可获得站内「动态图创作者」标识。</p>
+        <a href="/#submit" class="btn-primary" style="display:inline-flex;">立即投稿</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="aux-sidebar" aria-label="辅助信息">
+    <div class="aux-card">
+      <div class="aux-title">站内搜索</div>
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="搜索角色或作品…" aria-label="搜索动态图">
+        <button id="searchBtn">搜索</button>
+      </div>
+      <p class="search-empty" id="searchEmptySidebar">没有找到匹配条目。</p>
+    </div>
+
+    <div class="aux-card">
+      <div class="aux-title">本周更新条目</div>
+      <ul class="aux-list">
+        <li><a href="/#featured">菈妮 · 60fps 重制版</a><div class="aux-meta">11-07 · 3D渲染</div></li>
+        <li><a href="/#featured">蒂法 · MMD 新版</a><div class="aux-meta">11-06 · 动画片段</div></li>
+        <li><a href="/#featured">波奇酱 · 24fps 像素</a><div class="aux-meta">11-05 · 像素风</div></li>
+        <li><a href="/#featured">八重神子 · 60帧物理</a><div class="aux-meta">11-04 · MMD</div></li>
+        <li><a href="/#featured">菲伦 · 手绘修正</a><div class="aux-meta">11-03 · 2D手绘</div></li>
+      </ul>
+    </div>
+
+    <div class="aux-card">
+      <div class="aux-title">热门标签</div>
+      <div class="tag-cloud" style="gap:6px;">
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">菈妮</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">蒂法</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">波奇酱</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">雷电将军</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">菲伦</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">春丽</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">APNG</a>
+        <a href="/#featured" style="padding:4px 10px;font-size:12px;">像素风</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>揉胸动态图</h3>
+        <p>收录 2025 年至今的游戏、动画与同人动态图，以 GIF 与 APNG 为主，覆盖 18 部作品、426 个条目。每周三、周六固定更新，单周新增条目平均 8–12 条。</p>
+      </div>
+      <div class="footer-col">
+        <h4>频道</h4>
+        <ul>
+          <li><a href="/#featured">游戏角色</a></li>
+          <li><a href="/#featured">动画片段</a></li>
+          <li><a href="/#featured">像素风</a></li>
+          <li><a href="/#featured">3D渲染</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#submit">投稿入口</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 揉胸动态图 · 内容均为示例数据，用于展示页面结构</span>
+      <span>更新时间：2026-11-08</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部按钮 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+  (function() {
+    // 移动端菜单
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.textContent = isOpen ? '✕' : '☰';
+    });
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.textContent = '☰';
+      }
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.textContent = '☰';
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.textContent = '☰';
+      }
+    });
+
+    // 回到顶部
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight) {
+        backTop.classList.add('visible');
+      } else {
+        backTop.classList.remove('visible');
+      }
+    });
+    backTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 分类筛选（视觉切换 + 控制卡片显示）
+    const categoryGrid = document.getElementById('categoryGrid');
+    const cardGrid = document.querySelector('.card-grid');
+    let allCards = Array.from(cardGrid.querySelectorAll('.card'));
+
+    categoryGrid.addEventListener('click', function(e) {
+      const item = e.target.closest('.category-item');
+      if (!item) return;
+      categoryGrid.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      const cat = item.dataset.category;
+      if (cat === '全部') {
+        allCards.forEach(c => c.style.display = '');
+      } else {
+        allCards.forEach(c => {
+          const tags = c.querySelectorAll('.tag');
+          const tagTexts = Array.from(tags).map(t => t.textContent);
+          c.style.display = tagTexts.includes(cat) ? '' : 'none';
+        });
+      }
+    });
+
+    // 搜索
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchEmpty = document.getElementById('searchEmptySidebar');
+
+    function performSearch() {
+      const q = searchInput.value.trim().toLowerCase();
+      let found = 0;
+      allCards.forEach(c => {
+        const text = c.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          c.style.display = '';
+          found++;
+        } else {
+          c.style.display = 'none';
+        }
+      });
+      if (found === 0) {
+        searchEmpty.style.display = 'block';
+      } else {
+        searchEmpty.style.display = 'none';
+      }
+      // 重置分类高亮
+      categoryGrid.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+      categoryGrid.querySelector('[data-category="全部"]').classList.add('active');
+    }
+
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+    searchInput.addEventListener('input', function() {
+      if (searchInput.value.trim() === '') {
+        allCards.forEach(c => c.style.display = '');
+        searchEmpty.style.display = 'none';
+      }
+    });
+  })();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "揉胸动态图",
+  "description": "揉胸动态图聚合站，提供游戏角色揉胸GIF、动图合集、动画片段与表情包资源。",
+  "url": "https://example.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "揉胸动态图一般有哪些常见格式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GIF 是最常见的格式，兼容性最好但只有 256 色；APNG 支持全彩和透明背景，画质更好但部分平台不支持直接上传；WebP 动图体积小，Chrome 和 Edge 支持良好，Safari 需 16 以上版本。站内 11 月新增条目中 GIF 占 68%，APNG 占 15%，WebP 占 12%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一个角色有多个版本，怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先看更新日期，11 月后的版本普遍修复了手部穿模；再看循环质量标注，A 级无缝循环优先；最后比较文件体积，同画质下选小的。以艾尔登法环菈妮为例，11 月 7 日版修复了 10 月版的手部穿透问题，文件从 4.2 MB 压缩到 2.1 MB。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "像素风和 3D 渲染的揉胸动态图有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "像素风以 8-bit 或 16-bit 风格绘制，单帧尺寸通常 64×64 至 128×128 像素，文件体积小（多在 300 KB 以内），适合做表情包；3D 渲染基于 MMD 或 Blender 制作，分辨率 480×270 起，带光照和物理运算，文件体积 1.5 MB 以上，细节更丰富但加载慢。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些作品的揉胸动态图最多？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "截至 11 月 7 日，站内条目数排名前五的作品依次是：艾尔登法环（52 条）、最终幻想7重制版（47 条）、原神（43 条）、孤独摇滚（31 条）、葬送的芙莉莲（24 条）。艾尔登法环的条目集中在菈妮和梅琳娜两个角色上，两者合计占该作品条目的 76%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "APNG 格式的动态图怎么在手机上查看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOS 的 Safari 从 16 版开始原生支持 APNG，直接打开即可播放；Android 端 Chrome 和 Firefox 均支持，部分国产浏览器（如 QQ 浏览器 12.3 以下版本）需要安装扩展。若遇到不支持的浏览器，站内每个 APNG 条目都提供了对应的 GIF 备用版本，画质略降但可直接播放。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "动态图文件太大加载慢怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "站内 11 月上线了压缩版本选项，每个条目提供「原画」和「压缩」两个下载入口。压缩版采用调色板优化和帧间差分编码，文件体积平均缩小 55%，画质损失在 3% 以内（SSIM 指标）。以最终幻想7蒂法 MMD 版为例，原版 3.8 MB，压缩版 1.7 MB，循环流畅度不变。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+          </html>
