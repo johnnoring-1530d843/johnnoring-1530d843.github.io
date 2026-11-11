@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久久艹久久日 - 亚洲视频聚合与社区热议</title>
+<meta name="description" content="久久艹久久日聚焦亚洲成人视频与社区内容，汇集日本AV、国产原创、欧美精品、动漫里番、伦理剧情片等分类，展示最新更新、热门作品、用户评论与FAQ，适合关注此类内容的成年观众浏览参考。">
+<meta name="keywords" content="久久艹久久日">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a2e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%23e94560' text-anchor='middle'%3E久%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --color-primary:#c2185b;
+  --color-primary-light:#f06292;
+  --color-primary-dark:#8e0038;
+  --color-bg:#faf7f8;
+  --color-surface:#ffffff;
+  --color-surface-alt:#fdf2f5;
+  --color-text:#1f1b1e;
+  --color-text-secondary:#5f5459;
+  --color-text-muted:#93868c;
+  --color-border:#e8dfe3;
+  --radius-card:14px;
+  --radius-btn:8px;
+  --radius-tag:20px;
+  --radius-banner:18px;
+  --shadow-default:0 2px 10px rgba(30,20,25,.06);
+  --shadow-hover:0 8px 24px rgba(30,20,25,.12);
+  --font-main:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --max-width:1340px;
+  --header-height:60px;
+  --notice-height:38px;
+  --sticky-offset:calc(var(--notice-height) + var(--header-height) + 12px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-offset)}
+body{
+  font-family:var(--font-main);
+  background:var(--color-bg);
+  color:var(--color-text);
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+img{display:block;max-width:100%}
+
+/* 吸顶公告条 */
+.notice-bar{
+  position:sticky;top:0;z-index:100;
+  background:linear-gradient(90deg,var(--color-primary-dark),var(--color-primary));
+  color:#fff;
+  height:var(--notice-height);
+  display:flex;align-items:center;
+  font-size:13px;
+  overflow:hidden;
+}
+.notice-bar .notice-inner{
+  max-width:var(--max-width);margin:0 auto;width:100%;
+  padding:0 20px;display:flex;align-items:center;gap:18px;
+  white-space:nowrap;overflow:hidden;
+}
+.notice-bar .brand-mini{font-weight:700;letter-spacing:1px;flex-shrink:0;font-size:13px}
+.notice-bar .notice-items{display:flex;gap:24px;overflow:hidden;text-overflow:ellipsis}
+.notice-bar .notice-items span{opacity:.92}
+.notice-bar .notice-items b{font-weight:600;color:#ffe082}
+
+/* 吸顶页头 */
+.site-header{
+  position:sticky;top:var(--notice-height);z-index:99;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-border);
+  height:var(--header-height);
+}
+.header-inner{
+  max-width:var(--max-width);margin:0 auto;height:100%;
+  padding:0 20px;display:flex;align-items:center;gap:24px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo svg{width:34px;height:34px}
+.logo-text{font-weight:800;font-size:19px;color:var(--color-primary-dark);letter-spacing:.5px}
+.main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.main-nav::-webkit-scrollbar{display:none}
+.main-nav a{
+  padding:6px 12px;border-radius:var(--radius-btn);font-size:14px;
+  color:var(--color-text-secondary);white-space:nowrap;transition:background .2s,color .2s;
+}
+.main-nav a:hover,.main-nav a.active{background:var(--color-surface-alt);color:var(--color-primary)}
+.header-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{
+  display:flex;align-items:center;gap:6px;
+  background:var(--color-surface-alt);border:1px solid var(--color-border);
+  border-radius:var(--radius-btn);padding:5px 10px;
+}
+.search-box input{
+  border:none;background:transparent;outline:none;font-size:13px;width:130px;color:var(--color-text);
+}
+.search-box button{font-size:13px;color:var(--color-primary);font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:6px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--color-text);border-radius:2px;transition:.2s}
+
+/* 首屏 */
+.hero{
+  max-width:var(--max-width);margin:0 auto;padding:36px 20px 28px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;
+}
+.hero-left h1{
+  font-size:38px;font-weight:900;letter-spacing:2px;line-height:1.25;
+  color:var(--color-primary-dark);margin-bottom:14px;
+}
+.hero-left .hero-desc{font-size:15.5px;color:var(--color-text-secondary);max-width:540px;margin-bottom:22px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero-tags span{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  padding:4px 12px;border-radius:var(--radius-tag);font-size:13px;color:var(--color-text-secondary);
+}
+.hero-tags span b{color:var(--color-primary);font-weight:600}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  background:var(--color-primary);color:#fff;padding:10px 26px;
+  border-radius:var(--radius-btn);font-size:15px;font-weight:600;
+  transition:background .2s,box-shadow .2s;
+}
+.btn-primary:hover{background:var(--color-primary-dark);box-shadow:var(--shadow-hover)}
+.btn-ghost{
+  border:1px solid var(--color-primary);color:var(--color-primary);
+  padding:10px 26px;border-radius:var(--radius-btn);font-size:15px;font-weight:600;
+  transition:background .2s;
+}
+.btn-ghost:hover{background:var(--color-surface-alt)}
+.hero-visual{
+  position:relative;height:300px;border-radius:var(--radius-banner);
+  background:linear-gradient(135deg,#2d1b2e 0%,#4a1c33 55%,#7a1e43 100%);
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+}
+.hero-visual svg{width:100%;height:100%;position:absolute;inset:0}
+.hero-visual .visual-label{
+  position:relative;z-index:2;color:#fff;text-align:center;
+}
+.hero-visual .visual-label strong{display:block;font-size:26px;letter-spacing:3px;font-weight:800}
+.hero-visual .visual-label em{display:block;font-style:normal;font-size:12px;letter-spacing:6px;opacity:.65;margin-top:6px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-visual .visual-label{animation:floaty 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.hero-visual .visual-label{animation:none}}
+
+/* 三栏主体 */
+.page-layout{
+  max-width:var(--max-width);margin:0 auto;padding:0 20px 50px;
+  display:grid;grid-template-columns:172px minmax(0,1fr) 248px;gap:28px;
+  align-items:start;
+}
+.channel-sidebar{
+  position:sticky;top:var(--sticky-offset);
+  background:var(--color-surface);border-radius:var(--radius-card);
+  box-shadow:var(--shadow-default);padding:16px 0;overflow:hidden;
+}
+.channel-sidebar .side-title{
+  font-size:12px;font-weight:700;color:var(--color-text-muted);
+  letter-spacing:2px;padding:0 16px 10px;text-transform:uppercase;
+}
+.channel-sidebar a{
+  display:block;padding:7px 16px;font-size:14px;color:var(--color-text-secondary);
+  border-left:3px solid transparent;transition:.15s;
+}
+.channel-sidebar a:hover,.channel-sidebar a.current{
+  background:var(--color-surface-alt);color:var(--color-primary);
+  border-left-color:var(--color-primary);font-weight:600;
+}
+.main-content{min-width:0}
+.aux-sidebar{
+  position:sticky;top:var(--sticky-offset);display:flex;flex-direction:column;gap:20px;
+}
+
+/* 板块通用 */
+.section{margin-bottom:42px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.section-head h2{
+  font-size:21px;font-weight:800;color:var(--color-text);letter-spacing:.5px;
+  border-left:4px solid var(--color-primary);padding-left:12px;line-height:1.3;
+}
+.section-head .sub{font-size:13px;color:var(--color-text-muted)}
+.card{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  box-shadow:var(--shadow-default);transition:box-shadow .2s,transform .2s;
+}
+.card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+
+/* 概览 */
+.overview-box{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:24px 26px;box-shadow:var(--shadow-default);
+  font-size:14.5px;color:var(--color-text-secondary);
+}
+.overview-box p{margin-bottom:12px}
+.overview-box p:last-child{margin-bottom:0}
+.overview-box strong{color:var(--color-text);font-weight:600}
+
+/* 精选卡片 */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.featured-card{overflow:hidden;display:flex;flex-direction:column}
+.featured-card .thumb{position:relative;aspect-ratio:4/3;overflow:hidden}
+.featured-card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.featured-card:hover .thumb img{transform:scale(1.05)}
+.featured-card .type-badge{
+  position:absolute;top:8px;left:8px;background:rgba(194,24,91,.9);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:var(--radius-tag);font-weight:600;
+}
+.featured-card .heat{
+  position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:var(--radius-tag);
+}
+.featured-card .info{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.featured-card h3{font-size:15px;font-weight:700;line-height:1.4;color:var(--color-text)}
+.featured-card .desc{font-size:12.5px;color:var(--color-text-secondary);line-height:1.55}
+.featured-card .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:6px}
+.featured-card .tags span{
+  font-size:11px;color:var(--color-primary);background:var(--color-surface-alt);
+  padding:1px 8px;border-radius:var(--radius-tag);
+}
+
+/* 最新更新列表 */
+.update-list{display:flex;flex-direction:column;gap:2px;background:var(--color-surface);border-radius:var(--radius-card);padding:8px 0;box-shadow:var(--shadow-default)}
+.update-item{display:flex;align-items:baseline;gap:12px;padding:10px 18px;transition:background .15s}
+.update-item:hover{background:var(--color-surface-alt)}
+.update-item .u-title{font-weight:600;font-size:14.5px;color:var(--color-text);flex-shrink:0;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.update-item .u-summary{font-size:13px;color:var(--color-text-secondary);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.update-item .u-date{font-size:12px;color:var(--color-text-muted);flex-shrink:0}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:16px 14px;box-shadow:var(--shadow-default);text-align:center;
+  transition:.2s;border:1px solid transparent;
+}
+.cat-item:hover{border-color:var(--color-primary-light);transform:translateY(-2px)}
+.cat-item .cat-icon{font-size:22px;margin-bottom:6px}
+.cat-item .cat-name{font-size:14px;font-weight:700;color:var(--color-text)}
+.cat-item .cat-count{font-size:12px;color:var(--color-text-muted);margin-top:2px}
+
+/* 深度解析 */
+.article-body{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:28px 30px;box-shadow:var(--shadow-default);
+  font-size:15px;color:var(--color-text-secondary);line-height:1.85;
+}
+.article-body h3{
+  font-size:17px;font-weight:800;color:var(--color-text);
+  margin:24px 0 10px;padding-left:10px;border-left:3px solid var(--color-primary-light);
+}
+.article-body h3:first-child{margin-top:0}
+.article-body p{margin-bottom:12px}
+.article-body ul{margin:10px 0 14px;padding-left:0}
+.article-body ul li{
+  position:relative;padding-left:18px;margin-bottom:7px;font-size:14.5px;
+}
+.article-body ul li::before{
+  content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;
+  border-radius:50%;background:var(--color-primary-light);
+}
+.article-body .fact-box{
+  background:var(--color-surface-alt);border-radius:10px;padding:14px 18px;
+  margin:14px 0;font-size:14px;border-left:3px solid var(--color-primary);
+}
+.article-body .fact-box strong{color:var(--color-text)}
+
+/* 指南步骤 */
+.guide-steps{counter-reset:step;display:flex;flex-direction:column;gap:14px}
+.guide-step{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:18px 20px 18px 62px;position:relative;box-shadow:var(--shadow-default);
+}
+.guide-step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  position:absolute;left:18px;top:16px;font-size:22px;font-weight:900;
+  color:var(--color-primary-light);line-height:1;
+}
+.guide-step h3{font-size:15.5px;font-weight:700;margin-bottom:6px;color:var(--color-text)}
+.guide-step p{font-size:13.5px;color:var(--color-text-secondary)}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-list details{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  box-shadow:var(--shadow-default);overflow:hidden;
+}
+.faq-list summary{
+  padding:15px 20px;font-weight:600;font-size:14.5px;color:var(--color-text);
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;
+  transition:background .15s;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::before{
+  content:"+";font-size:18px;color:var(--color-primary);
+  font-weight:700;flex-shrink:0;transition:transform .2s;
+}
+.faq-list details[open] summary::before{transform:rotate(45deg)}
+.faq-list summary:hover{background:var(--color-surface-alt)}
+.faq-list .faq-answer{
+  padding:0 20px 16px 44px;font-size:14px;color:var(--color-text-secondary);
+}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.comment-card{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:14px 16px;box-shadow:var(--shadow-default);
+}
+.comment-card .c-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.comment-card .c-avatar{
+  width:28px;height:28px;border-radius:50%;background:var(--color-primary-light);
+  color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.comment-card .c-name{font-size:13px;font-weight:600;color:var(--color-text)}
+.comment-card .c-time{font-size:11px;color:var(--color-text-muted);margin-left:auto}
+.comment-card .c-text{font-size:13.5px;color:var(--color-text-secondary);line-height:1.65}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:14px}
+.news-item{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:16px 20px;box-shadow:var(--shadow-default);
+  display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:start;
+}
+.news-item h3{font-size:15px;font-weight:700;color:var(--color-text);grid-column:1}
+.news-item .news-date{font-size:12px;color:var(--color-text-muted);grid-column:2;text-align:right}
+.news-item .news-summary{font-size:13.5px;color:var(--color-text-secondary);grid-column:1/-1;margin-top:2px}
+
+/* 相关推荐 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tags a{
+  background:var(--color-surface);border:1px solid var(--color-border);
+  padding:7px 16px;border-radius:var(--radius-tag);font-size:13.5px;
+  color:var(--color-text-secondary);transition:.2s;
+}
+.rec-tags a:hover{border-color:var(--color-primary);color:var(--color-primary);background:var(--color-surface-alt)}
+
+/* 补充榜单 */
+.rank-list{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:8px 0;box-shadow:var(--shadow-default);counter-reset:rank;
+}
+.rank-item{
+  display:flex;align-items:center;gap:12px;padding:10px 20px;
+  transition:background .15s;
+}
+.rank-item:hover{background:var(--color-surface-alt)}
+.rank-item::before{
+  counter-increment:rank;content:counter(rank);
+  width:22px;height:22px;border-radius:6px;background:var(--color-surface-alt);
+  color:var(--color-text-muted);font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.rank-item:nth-child(-n+3)::before{background:var(--color-primary);color:#fff}
+.rank-item .r-title{font-size:14px;font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank-item .r-score{font-size:12px;color:var(--color-primary);font-weight:600}
+
+/* 投稿互动 */
+.submit-box{
+  background:linear-gradient(120deg,var(--color-primary-dark),var(--color-primary));
+  border-radius:var(--radius-banner);padding:24px 28px;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.submit-box h2{font-size:18px;font-weight:800;border:none;padding:0;color:#fff}
+.submit-box p{font-size:13px;opacity:.85;margin-top:4px}
+.submit-box .btn-white{
+  background:#fff;color:var(--color-primary-dark);padding:9px 24px;
+  border-radius:var(--radius-btn);font-weight:700;font-size:14px;flex-shrink:0;
+}
+
+/* 侧栏卡片 */
+.side-card{
+  background:var(--color-surface);border-radius:var(--radius-card);
+  padding:16px 18px;box-shadow:var(--shadow-default);
+}
+.side-card h3{
+  font-size:14px;font-weight:800;color:var(--color-text);margin-bottom:12px;
+  padding-bottom:8px;border-bottom:1px solid var(--color-border);
+}
+.side-card .hot-item{display:flex;align-items:baseline;gap:8px;padding:6px 0;font-size:13px}
+.side-card .hot-item .num{font-weight:800;color:var(--color-primary);font-size:12px;width:16px;flex-shrink:0}
+.side-card .hot-item .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--color-text-secondary)}
+.side-card .hot-item .v{font-size:11px;color:var(--color-text-muted)}
+.side-card .update-mini{font-size:12.5px;color:var(--color-text-secondary);padding:5px 0;border-bottom:1px dashed var(--color-border)}
+.side-card .update-mini:last-child{border-bottom:none}
+.side-card .update-mini b{color:var(--color-text);font-weight:600}
+
+/* 页尾 */
+.site-footer{
+  background:#1e1418;color:#c9bcc2;margin-top:20px;
+  padding:40px 20px 24px;
+}
+.footer-inner{max-width:var(--max-width);margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.footer-brand .f-logo{font-size:18px;font-weight:800;color:#fff;letter-spacing:1px;margin-bottom:10px}
+.footer-brand p{font-size:12.5px;line-height:1.8;color:#9a8b92;max-width:300px}
+.footer-col h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.footer-col a{display:block;font-size:12.5px;color:#9a8b92;padding:3px 0;transition:color .15s}
+.footer-col a:hover{color:var(--color-primary-light)}
+.footer-bottom{
+  border-top:1px solid #35262d;padding-top:16px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:#7d6d75;
+}
+
+/* 回到顶部 */
+.back-top{
+  position:fixed;right:24px;bottom:30px;width:44px;height:44px;border-radius:50%;
+  background:var(--color-primary);color:#fff;font-size:18px;display:flex;
+  align-items:center;justify-content:center;box-shadow:var(--shadow-hover);
+  opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:90;
+}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-3px)}
+
+/* 移动端遮罩 */
+.nav-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:98;
+}
+
+/* 响应式 */
+@media (max-width:1180px){
+  .page-layout{grid-template-columns:160px minmax(0,1fr) 220px;gap:20px}
+  .featured-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:1024px){
+  .page-layout{grid-template-columns:minmax(0,1fr) 240px;gap:24px}
+  .channel-sidebar{display:none}
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .hero-visual{height:220px}
+  .featured-grid{grid-template-columns:repeat(2,1fr)}
+  .comment-list{grid-template-columns:1fr 1fr}
+  .header-actions .search-box{display:none}
+  .hamburger{display:flex}
+  .main-nav{
+    position:fixed;top:0;right:0;bottom:0;width:260px;
+    background:var(--color-surface);flex-direction:column;
+    padding:70px 16px 20px;gap:2px;transform:translateX(100%);
+    transition:transform .25s;z-index:120;box-shadow:-4px 0 20px rgba(0,0,0,.15);
+    overflow-y:auto;
+  }
+  .main-nav.open{transform:translateX(0)}
+  .main-nav a{padding:11px 14px;font-size:15px;border-radius:8px}
+  .nav-overlay.show{display:block}
+  .nav-close{
+    position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;
+    background:var(--color-surface-alt);display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:var(--color-text);
+  }
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  body{font-size:14.5px}
+  .page-layout{grid-template-columns:1fr;gap:0}
+  .aux-sidebar{position:static;margin-top:30px}
+  .hero{padding:22px 16px 20px}
+  .hero-left h1{font-size:28px;letter-spacing:1px}
+  .hero-left .hero-desc{font-size:14px}
+  .hero-visual{height:180px}
+  .featured-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .comment-list{grid-template-columns:1fr}
+  .article-body{padding:20px 18px}
+  .section-head h2{font-size:18px}
+  .header-inner{gap:12px;padding:0 14px}
+  .logo-text{font-size:16px}
+  .notice-bar .notice-inner{padding:0 12px;gap:10px}
+  .notice-bar .notice-items span:nth-child(2){display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:20px}
+  .submit-box{padding:20px}
+  .back-top{right:14px;bottom:20px;width:40px;height:40px}
+  .update-item .u-title{max-width:140px}
+}
+@media (max-width:420px){
+  .featured-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-left h1{font-size:24px}
+  .footer-top{grid-template-columns:1fr}
+}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice-bar" role="region" aria-label="站内公告">
+  <div class="notice-inner">
+    <span class="brand-mini">久久艹久久日</span>
+    <div class="notice-items">
+      <span><b>11月8日</b>「人妻の秘密 第3话」中文字幕更新</span>
+      <span><b>11月7日</b> 国产原创「夜班便利店」完整版上线</span>
+      <span><b>11月6日</b> 动漫里番「月下の契り」特典收录</span>
+    </div>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/#top" aria-label="久久艹久久日首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1a1a2e"/>
+        <text x="32" y="44" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#e94560" text-anchor="middle">久</text>
+      </svg>
+      <span class="logo-text">久久艹久久日</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="/#overview" class="active">领域概览</a>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rank">热度榜单</a>
+      <button class="nav-close" id="navClose" aria-label="关闭导航">✕</button>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box" role="search">
+        <input type="search" id="searchInput" placeholder="搜索作品、类型、演员" aria-label="站内搜索">
+        <button type="button" id="searchBtn" aria-label="搜索">搜索</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-left">
+    <h1>久久艹久久日</h1>
+    <p class="hero-desc">聚合亚洲成人视频与社区讨论的内容站。日本AV、国产原创、欧美精品、动漫里番、伦理剧情片按类型与更新节奏陈列，附作品看点、用户短评与选购参考。</p>
+    <div class="hero-tags">
+      <span><b>1286</b> 部收录作品</span>
+      <span><b>11月8日</b> 更新 14 部</span>
+      <span><b>每日</b> 热度榜单刷新</span>
+      <span><b>6</b> 个内容频道</span>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-primary" href="/#featured">浏览精选作品</a>
+      <a class="btn-ghost" href="/#updates">查看今日更新</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="g1" cx="30%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#e94560" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#e94560" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="g2" cx="75%" cy="70%" r="60%">
+          <stop offset="0%" stop-color="#f06292" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#f06292" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#g1)"/>
+      <rect width="400" height="300" fill="url(#g2)"/>
+      <circle cx="310" cy="70" r="42" fill="none" stroke="#e94560" stroke-width="1.2" opacity=".5"/>
+      <circle cx="310" cy="70" r="26" fill="none" stroke="#f06292" stroke-width="1" opacity=".6"/>
+      <circle cx="80" cy="230" r="60" fill="none" stroke="#e94560" stroke-width="1" opacity=".3"/>
+      <circle cx="80" cy="230" r="34" fill="none" stroke="#f06292" stroke-width="1" opacity=".4"/>
+      <path d="M0 260 Q100 220 200 250 T400 230" fill="none" stroke="#e94560" stroke-width="1.4" opacity=".35"/>
+    </svg>
+    <div class="visual-label">
+      <strong>久久艹久久日</strong>
+      <em>ASIA ADULT AGGREGATOR</em>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主体 -->
+<div class="page-layout">
+
+  <!-- 左频道栏 -->
+  <aside class="channel-sidebar" aria-label="频道索引">
+    <div class="side-title">频道索引</div>
+    <a href="/#overview" class="current">领域概览</a>
+    <a href="/#featured">精选作品</a>
+    <a href="/#updates">最新更新</a>
+    <a href="/#categories">分类入口</a>
+    <a href="/#analysis">深度解析</a>
+    <a href="/#guide">观看指南</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">用户评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#rank">热度榜单</a>
+    <a href="/#submit">投稿互动</a>
+    <a href="/#recommend">相关推荐</a>
+  </aside>
+
+  <!-- 中间主内容 -->
+  <main class="main-content">
+
+    <!-- 1. 领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-head">
+        <h2>亚洲成人视频内容形态概览</h2>
+        <span class="sub">截至2026年11月8日</span>
+      </div>
+      <div class="overview-box">
+        <p>亚洲成人视频大致可分成几个方向：日本商业AV有完整的制作委员会和发行体系，单部时长从60分钟到150分钟不等，通常带剧情前戏和分段章节；国产原创近两年在制作规格上明显提升，不少团队开始做系列化，比如「夜班便利店」已经出到第四集，场景从便利店扩展到酒店与办公室；欧美精品以制作预算和场景调度见长，帧率和调色普遍优于同价位亚洲作品；动漫里番则走粉丝向路线，单集20—25分钟，原作漫画改占多数。</p>
+        <p>从11月第一周的更新密度看，日本AV仍是数量主力，S1、Moodyz、IP社三大厂牌在11月5日—8日合计放出9部新作。国产原创的更新节奏不稳定，团队多则一周两更少则两周断更，观众需要追番式关注。欧美精品在站内的存量偏少，约占总收录量的12%，但单部评分中位数高于整体。</p>
+        <p>类型标签上，人妻、职场、校园、NTR、纯爱是搜索频次最高的五个词。其中「人妻」相关作品在11月第一周的点击量环比上升约18%，与S1新作「人妻の秘密 第3话」上线直接相关。另有一批观众偏好短篇合集，单段15—20分钟、无连续剧情的作品在通勤场景下更受欢迎。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选作品推荐 -->
+    <section class="section" id="featured">
+      <div class="section-head">
+        <h2>本周精选作品推荐</h2>
+        <span class="sub">编辑筛选 · 每部附具体看点</span>
+      </div>
+      <div class="featured-grid">
+        <a class="card featured-card" href="/#featured" data-search="人妻の秘密 人妻 日本AV S1">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/renqi3/400/300" alt="人妻の秘密 第3话 封面" width="400" height="300" loading="lazy">
+            <span class="type-badge">日本AV</span>
+            <span class="heat">热度 9.4</span>
+          </div>
+          <div class="info">
+            <h3>人妻の秘密 第3话</h3>
+            <p class="desc">S1厂牌11月8日更新，延续前两话的邻里误会主线。本话增加了一段长达22分钟的对手戏，导演在采访里提到采用单机位长镜头拍摄。</p>
+            <div class="tags"><span>人妻</span><span>S1</span><span>中文字幕</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="夜班便利店 国产原创 系列剧">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/yeban4/400/300" alt="夜班便利店 第四集 场景照" width="400" height="300" loading="lazy">
+            <span class="type-badge">国产原创</span>
+            <span class="heat">热度 9.1</span>
+          </div>
+          <div class="info">
+            <h3>夜班便利店 第四集</h3>
+            <p class="desc">国产团队「南城影像」系列作，11月7日上线完整版。第四集把场景从便利店挪到隔壁酒店，时长拉到78分钟，是目前系列里最长的一集。</p>
+            <div class="tags"><span>国产</span><span>系列剧</span><span>职场</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="月下の契り 动漫里番 特典">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/yuexia/400/300" alt="月下の契り 动漫里番 主视觉" width="400" height="300" loading="lazy">
+            <span class="type-badge">动漫里番</span>
+            <span class="heat">热度 8.8</span>
+          </div>
+          <div class="info">
+            <h3>月下の契り</h3>
+            <p class="desc">漫画改里番，11月6日上线特典收录版。正片24分钟，特典多出8分钟的分镜稿解说，制作方在官推贴出了原画张数共1140张。</p>
+            <div class="tags"><span>里番</span><span>漫画改</span><span>特典</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="办公室午后 欧美精品 职场">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/office_noon/400/300" alt="办公室午后 欧美精品 剧照" width="400" height="300" loading="lazy">
+            <span class="type-badge">欧美精品</span>
+            <span class="heat">热度 8.6</span>
+          </div>
+          <div class="info">
+            <h3>办公室午后</h3>
+            <p class="desc">欧美厂牌Vixen出品，11月3日上线。全片4K拍摄，调色偏冷，三段剧情用同一间会议室取景，靠灯光变化区分时间段。</p>
+            <div class="tags"><span>欧美</span><span>4K</span><span>职场</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="纯爱の日曜日 日本AV 纯爱">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/junai_sun/400/300" alt="纯爱の日曜日 作品封面" width="400" height="300" loading="lazy">
+            <span class="type-badge">日本AV</span>
+            <span class="heat">热度 8.5</span>
+          </div>
+          <div class="info">
+            <h3>纯爱の日曜日</h3>
+            <p class="desc">Moodyz 11月4日新作，走纯爱路线。全片只有一个场景和两位演员，时长110分钟，台词量是同期作品里偏多的。</p>
+            <div class="tags"><span>纯爱</span><span>Moodyz</span><span>长片</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="地铁通勤合集 短篇 国产原创">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/metro_comp/400/300" alt="地铁通勤合集 短篇合辑封面" width="400" height="300" loading="lazy">
+            <span class="type-badge">短篇合集</span>
+            <span class="heat">热度 8.2</span>
+          </div>
+          <div class="info">
+            <h3>地铁通勤合集 Vol.7</h3>
+            <p class="desc">六段独立短篇合集，每段15—18分钟，11月2日打包上线。场景全部在地铁与站台，适合碎片时间，评论区提到第七段收音有瑕疵。</p>
+            <div class="tags"><span>短篇</span><span>合集</span><span>通勤</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="研修旅行 日本AV IP社 校园">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/kenshu/400/300" alt="研修旅行 日本AV 封面" width="400" height="300" loading="lazy">
+            <span class="type-badge">日本AV</span>
+            <span class="heat">热度 8.0</span>
+          </div>
+          <div class="info">
+            <h3>研修旅行 两天一夜</h3>
+            <p class="desc">IP社11月1日发行，外景占全片六成，在箱根一家温泉旅馆拍摄。花絮里提到拍摄期遇到台风，第二天外景改到室内完成。</p>
+            <div class="tags"><span>校园</span><span>IP社</span><span>外景</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="霓虹街角 国产原创 都市">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/neon_corner/400/300" alt="霓虹街角 国产原创 海报" width="400" height="300" loading="lazy">
+            <span class="type-badge">国产原创</span>
+            <span class="heat">热度 7.9</span>
+          </div>
+          <div class="info">
+            <h3>霓虹街角</h3>
+            <p class="desc">10月30日上线的国产单本作，夜景戏为主。团队在重庆取景，用了大量霓虹灯招牌做前景，弹幕里讨论最多的是取景地具体在哪条街。</p>
+            <div class="tags"><span>国产</span><span>都市</span><span>夜景</span></div>
+          </div>
+        </a>
+        <a class="card featured-card" href="/#featured" data-search="NTR系列 日本AV 题材">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/ntr_series/400/300" alt="NTR系列新作 封面" width="400" height="300" loading="lazy">
+            <span class="type-badge">日本AV</span>
+            <span class="heat">热度 7.7</span>
+          </div>
+          <div class="info">
+            <h3>NTR系列 第12弹</h3>
+            <p class="desc">系列第12部，10月29日发行。本作把叙事线拆成三段时间倒序，观众要先看结尾才能对上开头，评论两极分化明显。</p>
+            <div class="tags"><span>NTR</span><span>系列</span><span>倒叙</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="section" id="updates">
+      <div class="section-head">
+        <h2>11月8日更新动态</h2>
+        <span class="sub">按上线时间排序</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item"><span class="u-title">人妻の秘密 第3话</span><span class="u-summary">S1厂牌中文字幕版同步上线，新增22分钟长镜头对手戏</span><span class="u-date">11-08</span></div>
+        <div class="update-item"><span class="u-title">夜班便利店 第四集</span><span class="u-summary">完整版78分钟，场景移至酒店，系列最长单集</span><span class="u-date">11-07</span></div>
+        <div class="update-item"><span class="u-title">月下の契り 特典版</span><span class="u-summary">追加8分钟分镜稿解说，原画张数1140张</span><span class="u-date">11-06</span></div>
+        <div class="update-item"><span class="u-title">办公室午后 4K版</span><span class="u-summary">Vixen出品，调色偏冷，三段剧情共用会议室取景</span><span class="u-date">11-03</span></div>
+        <div class="update-item"><span class="u-title">纯爱の日曜日</span><span class="u-summary">Moodyz新作，110分钟单场景双人戏，台词量偏多</span><span class="u-date">11-04</span></div>
+        <div class="update-item"><span class="u-title">地铁通勤合集 Vol.7</span><span class="u-summary">六段短篇打包，第七段收音瑕疵被评论区点名</span><span class="u-date">11-02</span></div>
+        <div class="update-item"><span class="u-title">研修旅行 两天一夜</span><span class="u-summary">IP社外景作，箱根温泉旅馆拍摄，遇台风改室内</span><span class="u-date">11-01</span></div>
+        <div class="update-item"><span class="u-title">霓虹街角</span><span class="u-summary">国产单本作，重庆夜景取景，弹幕热议拍摄街道</span><span class="u-date">10-30</span></div>
+        <div class="update-item"><span class="u-title">NTR系列 第12弹</span><span class="u-summary">三段时间倒序叙事，评论两极分化</span><span class="u-date">10-29</span></div>
+        <div class="update-item"><span class="u-title">人妻の秘密 第2话 修正版</span><span class="u-summary">修复第24分钟音画不同步问题，重新压制</span><span class="u-date">10-27</span></div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section" id="categories">
+      <div class="section-head">
+        <h2>按类型与产地分类</h2>
+        <span class="sub">点击进入对应频道</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#featured"><div class="cat-icon">🎬</div><div class="cat-name">日本AV</div><div class="cat-count">收录 612 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">🇨🇳</div><div class="cat-name">国产原创</div><div class="cat-count">收录 287 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">🌐</div><div class="cat-name">欧美精品</div><div class="cat-count">收录 154 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">🌸</div><div class="cat-name">动漫里番</div><div class="cat-count">收录 96 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">💑</div><div class="cat-name">人妻系列</div><div class="cat-count">收录 178 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">💼</div><div class="cat-name">职场剧情</div><div class="cat-count">收录 132 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">🎒</div><div class="cat-name">校园题材</div><div class="cat-count">收录 110 部</div></a>
+        <a class="cat-item" href="/#featured"><div class="cat-icon">⏱️</div><div class="cat-name">短篇合集</div><div class="cat-count">收录 87 部</div></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section" id="analysis">
+      <div class="section-head">
+        <h2>日本AV与国产原创：制作规格与观看体验的实际差距</h2>
+        <span class="sub">基于11月第一周更新样本</span>
+      </div>
+      <div class="article-body">
+        <h3>单集时长与叙事密度不是一回事</h3>
+        <p>日本商业AV单集普遍在90—150分钟，但真正推进剧情的段落往往只占前20分钟，中段开始进入分段场景。以11月4日Moodyz的「纯爱の日曜日」为例，全片110分钟，两位演员、一个场景，台词集中在开头15分钟交代关系，之后基本靠肢体互动推进。国产原创单集偏短，「夜班便利店」前三集都在55—65分钟，第四集拉到78分钟已经是系列最长，但叙事密度反而更高——每10分钟有一次场景转换或人物关系变化。</p>
+        <p>这带来一个实际判断：想看完整故事线的观众，日本AV的性价比在下降，因为中段大量时间用于场景铺陈；国产原创在单位时间内的信息量更足，代价是制作精度不稳定。10月27日「人妻の秘密 第2话」修正版重新压制，起因就是第24分钟音画不同步，这类问题在国产团队里更常见，但日本厂牌也不是没有。</p>
+        <div class="fact-box"><strong>可核对的对比：</strong>11月1日—8日，S1、Moodyz、IP社合计上线9部，平均单集时长104分钟，平均场景数3.2个；同期国产原创上线4部（含系列续集），平均时长68分钟，平均场景数4.5个。场景数来自各作品章节标记，非主观估算。</div>
+
+        <h3>制作预算的可见痕迹在哪几处</h3>
+        <p>判断一部作品投入多少，可以从三个地方看：灯光、收音、外景比例。日本厂牌在棚拍灯光上稳定，S1的室内场景基本是三灯起步，肤色还原一致性高；国产团队在灯光上波动大，「霓虹街角」的夜景戏靠实景霓虹灯补光，好看但噪点多，暗部细节丢得厉害。收音方面，日本AV普遍用领夹麦加后期对白补录，国产原创有不少作品直接机头麦收音，「地铁通勤合集 Vol.7」第七段被评论区点名，就是站台环境噪音压过了人声。</p>
+        <p>外景比例是另一个分水岭。IP社11月1日的「研修旅行 两天一夜」外景占六成，剧组在箱根实拍两天，遇台风后第二天的外景改到室内完成，花絮里能看到窗户上的雨痕。国产原创受限于成本，外景多为城市街拍，重庆、成都、长沙是出现频率最高的三个取景地，霓虹街角就是重庆洪崖洞附近的街道。</p>
+
+        <h3>系列化对观众决策的影响</h3>
+        <p>系列作的好处是预期稳定，坏处是审美疲劳来得快。「人妻の秘密」出到第三话，主线是邻里误会，每一话换一个误会对象，结构高度一致。观众如果喜欢第一话，第二、三话大概率不会失望，但也很难有惊喜。国产的「夜班便利店」系列走的是另一条路，每一集换场景、换配角，主线只保留店长和夜班店员两个固定人物，第四集直接把场景搬到酒店，算是系列内的一个变奏。</p>
+        <p>从追更角度看，系列作的更新时间比单本作更值得关注。S1的「人妻の秘密」前三话间隔分别是11天、9天，第四话还没排期；「夜班便利店」前三集间隔7天、12天，第四集隔了19天，团队在南城影像的账号下解释过一句“后期返工”，没细说。</p>
+
+        <h3>类型标签与搜索意图的错位</h3>
+        <p>站内搜索词频最高的「人妻」并不严格对应厂牌分类。S1把「人妻の秘密」归在剧情类，Moodyz的「纯爱の日曜日」其实也涉及已婚设定，但厂牌标签写的是纯爱。观众按「人妻」搜，两部都会出来；按「纯爱」搜，只会出后者。这种错位在国产原创里更明显，「夜班便利店」第四集的酒店场景被部分用户打上「职场」标签，团队自己写的是「都市情感」。</p>
+        <p>实际筛选时，厂牌标签比题材标签更可靠。S1、Moodyz、IP社的分类体系多年没大改，标签和内容基本对得上；国产团队的标签更随意，同一个系列不同集可能挂不同标签，追更时按系列名搜比按标签搜准。</p>
+      </div>
+    </section>
+
+    <!-- 6. 观看指南 -->
+    <section class="section" id="guide">
+      <div class="section-head">
+        <h2>从类型到单片的观看顺序</h2>
+        <span class="sub">四步判断一部作品值不值得投入时间</span>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <h3>先定类型，再看厂牌</h3>
+          <p>人妻、纯爱、NTR、职场、校园五个大类先筛掉不看的。日本AV优先看S1、Moodyz、IP社三家，品控稳定；国产原创先看团队是否有系列作，单本作的完成度波动更大。</p>
+        </div>
+        <div class="guide-step">
+          <h3>查时长与场景数</h3>
+          <p>单集超过100分钟且场景数少于3个的，中段大概率注水。60—80分钟、场景数4个以上的，单位时间信息量更足。短篇合集每段控制在15—20分钟，适合通勤。</p>
+        </div>
+        <div class="guide-step">
+          <h3>看评论区有没有点名具体问题</h3>
+          <p>音画不同步、收音瑕疵、字幕错位这三类问题，评论区通常会有人具体指出第几分钟。没有这类点名的，制作完成度一般过关。</p>
+        </div>
+        <div class="guide-step">
+          <h3>系列作追更看间隔</h3>
+          <p>两集间隔超过20天的系列，先看上一集的热度有没有掉。间隔短但不稳定的，说明团队在赶工，完成度可能打折。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <span class="sub">围绕具体作品与类型</span>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>「人妻の秘密」第3话和第2话中间隔了多久？</summary>
+          <div class="faq-answer">第2话是10月19日上线，第3话11月8日，间隔20天。第1话到第2话只隔了11天，这次间隔偏长，S1没有给出官方说明，花絮里导演提过一句“补拍了两天”。</div>
+        </details>
+        <details>
+          <summary>国产原创里哪些团队是稳定更新的？</summary>
+          <div class="faq-answer">南城影像的「夜班便利店」系列从9月至今出了四集，间隔7天、12天、19天，整体算稳；另一支团队「雾都制作」的都市系列更新间隔在两周左右，但每集时长不固定，60—90分钟都有。</div>
+        </details>
+        <details>
+          <summary>动漫里番的特典版和正片差在哪？</summary>
+          <div class="faq-answer">「月下の契り」特典版比正片多8分钟，内容是分镜稿逐页解说，不是新增剧情。制作方官推贴出原画1140张，特典里能看到其中约200张的绘制顺序，对漫画改粉丝有价值，只想看正片的可以跳过。</div>
+        </details>
+        <details>
+          <summary>欧美精品为什么在站内数量少但评分高？</summary>
+          <div class="faq-answer">收录量154部，占总量约12%，但单部评分中位数高于整体。原因是欧美厂牌Vixen等出品以4K拍摄和固定班底为主，单部制作周期长，更新慢，能进站的多数是已在外网有过口碑的作品，筛选门槛天然更高。</div>
+        </details>
+        <details>
+          <summary>短篇合集适合什么场景看？</summary>
+          <div class="faq-answer">「地铁通勤合集」这类六段独立短篇，每段15—18分钟，适合通勤或午休时段。缺点是段与段之间没有剧情关联，看到一半停下不需要记前情。第七段收音有瑕疵，介意的话从第一段看起。</div>
+        </details>
+        <details>
+          <summary>NTR系列第12弹的倒叙结构到底怎么排的？</summary>
+          <div class="faq-answer">三段分别对应事件的前、后、中，播放顺序是后—中—前。开头看到的是事件结束后的场景，中段回到转折点，最后才交代起因。评论区有人建议按正常时间顺序自己跳着看，但这样会丢掉导演在每段开头埋的同一句台词。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-head">
+        <h2>近期用户评论</h2>
+        <span class="sub">11月1日—8日</span>
+      </div>
+      <div class="comment-list">
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">夜</span><span class="c-name">夜行列车</span><span class="c-time">11-08</span></div><p class="c-text">人妻の秘密第3话那个22分钟长镜头是真的，一口气看完没快进。就是结尾收得有点急，感觉还能再拍十分钟。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">南</span><span class="c-name">南城老客</span><span class="c-time">11-08</span></div><p class="c-text">夜班便利店第四集拉到78分钟，场景换到酒店反而没前三集那个便利店里挤的感觉了。还是喜欢原来的小空间。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">月</span><span class="c-name">月下等更</span><span class="c-time">11-07</span></div><p class="c-text">特典那8分钟分镜解说比正片还有意思，1140张原画能看出作画顺序，动画党狂喜。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">V</span><span class="c-name">Vixen观察</span><span class="c-time">11-07</span></div><p class="c-text">办公室午后4K版调色偏冷这点不太适应，之前他们家的片子暖调多，这次像换了调色师。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">纯</span><span class="c-name">纯爱战士</span><span class="c-time">11-06</span></div><p class="c-text">纯爱の日曜日台词多是好事，但110分钟一个场景看到后半段有点困，撑不住。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">地</span><span class="c-name">地铁常客</span><span class="c-time">11-06</span></div><p class="c-text">通勤合集Vol.7第七段那个收音，站台广播都盖过人声了，团队后期没处理吗？其他五段没问题。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">研</span><span class="c-name">研修中</span><span class="c-time">11-05</span></div><p class="c-text">IP社那个箱根外景，雨痕在窗户上特别明显，花絮说是台风，难怪第二天全在室内。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">霓</span><span class="c-name">霓虹捕手</span><span class="c-time">11-04</span></div><p class="c-text">霓虹街角取景应该是在洪崖洞附近，我去过那条街，招牌角度对得上。就是夜景噪点确实多。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">N</span><span class="c-name">NTR路人</span><span class="c-time">11-04</span></div><p class="c-text">第12弹倒叙看完又按正序跳着看了一遍，同一句台词三个位置出现，导演是有想法的。就是第一次看确实懵。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">修</span><span class="c-name">修补匠</span><span class="c-time">11-03</span></div><p class="c-text">第2话修正版重压了，24分钟那个不同步问题没了，这次处理速度还行。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">标</span><span class="c-name">标签党</span><span class="c-time">11-02</span></div><p class="c-text">按人妻搜能搜到纯爱の日曜日，但按纯爱搜不到人妻の秘密，这标签体系有点乱。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">雾</span><span class="c-name">雾都观众</span><span class="c-time">11-01</span></div><p class="c-text">国产团队最近都在重庆取景，是商量好的还是成本低？连续看了三部都在洪崖洞附近。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">短</span><span class="c-name">短篇爱好者</span><span class="c-time">10-31</span></div><p class="c-text">短篇合集就是适合我这种午休只有20分钟的人，看完一段正好回去上班。</p></div>
+        <div class="comment-card"><div class="c-head"><span class="c-avatar">S</span><span class="c-name">S1老粉</span><span class="c-time">10-30</span></div><p class="c-text">人妻の秘密系列第一话最好看，后面两话结构太像了，换汤不换药。</p></div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-head">
+        <h2>近期内容动态</h2>
+        <span class="sub">2026年10月下旬至11月上旬</span>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <h3>S1公布11月发行计划，人妻の秘密第4话排期11月19日</h3>
+          <span class="news-date">11-08</span>
+          <p class="news-summary">官方发行表显示第4话定档19日，比前三话平均间隔短1天，导演栏仍是同一人，花絮拍摄已完成。</p>
+        </div>
+        <div class="news-item">
+          <h3>南城影像回应夜班便利店第四集延期，称后期返工两天</h3>
+          <span class="news-date">11-06</span>
+          <p class="news-summary">团队在账号下留言说明，第四集原定11月5日上线，因调色返工推迟到7日，未影响第五集排期。</p>
+        </div>
+        <div class="news-item">
+          <h3>月下の契り制作方公开原画1140张，特典版同步收录</h3>
+          <span class="news-date">11-05</span>
+          <p class="news-summary">官推贴出的原画编号从A001到A1140，特典解说了其中约200张的绘制顺序，正片分镜与成片差异集中在第14分钟。</p>
+        </div>
+        <div class="news-item">
+          <h3>Vixen四季度片单公布，办公室午后续作在列</h3>
+          <span class="news-date">11-03</span>
+          <p class="news-summary">续作暂定名「会议室之后」，沿用同一会议室场景，预计12月上线，依旧4K拍摄。</p>
+        </div>
+        <div class="news-item">
+          <h3>地铁通勤合集发布勘误，第七段将重新混音</h3>
+          <span class="news-date">11-02</span>
+          <p class="news-summary">团队公告称第七段收音问题源于现场广播干扰，计划11月10日前上线重混版本，已购用户可替换。</p>
+        </div>
+        <div class="news-item">
+          <h3>IP社研修旅行花絮披露台风影响，第二天外景改室内</h3>
+          <span class="news-date">10-30</span>
+          <p class="news-summary">花絮视频里能看到窗户雨痕，剧组称原定第二天的箱根神社外景取消，改为旅馆室内补拍，时长减少约9分钟。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section" id="recommend">
+      <div class="section-head">
+        <h2>相关方向与条目索引</h2>
+        <span class="sub">按具体内容方向</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#featured">人妻の秘密 全系列</a>
+        <a href="/#featured">夜班便利店 追更</a>
+        <a href="/#featured">S1厂牌作品</a>
+        <a href="/#featured">国产原创系列剧</a>
+        <a href="/#featured">短篇合集推荐</a>
+        <a href="/#featured">动漫里番漫画改</a>
+        <a href="/#featured">4K欧美精品</a>
+        <a href="/#featured">NTR系列全回顾</a>
+      </div>
+    </section>
+
+    <!-- 11. 热度榜单 -->
+    <section class="section" id="rank">
+      <div class="section-head">
+        <h2>11月第一周热度榜单</h2>
+        <span class="sub">按站内点击与评分综合</span>
+      </div>
+      <div class="rank-list">
+        <div class="rank-item"><span class="r-title">人妻の秘密 第3话</span><span class="r-score">9.4</span></div>
+        <div class="rank-item"><span class="r-title">夜班便利店 第四集</span><span class="r-score">9.1</span></div>
+        <div class="rank-item"><span class="r-title">月下の契り 特典版</span><span class="r-score">8.8</span></div>
+        <div class="rank-item"><span class="r-title">办公室午后 4K版</span><span class="r-score">8.6</span></div>
+        <div class="rank-item"><span class="r-title">纯爱の日曜日</span><span class="r-score">8.5</span></div>
+        <div class="rank-item"><span class="r-title">地铁通勤合集 Vol.7</span><span class="r-score">8.2</span></div>
+        <div class="rank-item"><span class="r-title">研修旅行 两天一夜</span><span class="r-score">8.0</span></div>
+        <div class="rank-item"><span class="r-title">霓虹街角</span><span class="r-score">7.9</span></div>
+      </div>
+    </section>
+
+    <!-- 投稿互动 -->
+    <section class="section" id="submit">
+      <div class="submit-box">
+        <div>
+          <h2>分享你的作品或观后短评</h2>
+          <p>投稿原创作品、上传片源信息、参与每周热度投票，或写一段具体到某部作品某一段的短评。</p>
+        </div>
+        <a class="btn-white" href="/#submit">进入投稿入口</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="aux-sidebar" aria-label="辅助信息">
+    <div class="side-card">
+      <h3>今日更新速览</h3>
+      <div class="update-mini"><b>11-08</b> 人妻の秘密 第3话</div>
+      <div class="update-mini"><b>11-07</b> 夜班便利店 第四集</div>
+      <div class="update-mini"><b>11-06</b> 月下の契り 特典版</div>
+      <div class="update-mini"><b>11-04</b> 纯爱の日曜日</div>
+      <div class="update-mini"><b>11-03</b> 办公室午后 4K版</div>
+    </div>
+    <div class="side-card">
+      <h3>按类型标签找</h3>
+      <div class="hot-item"><span class="num">1</span><span class="t">人妻</span><span class="v">178部</span></div>
+      <div class="hot-item"><span class="num">2</span><span class="t">纯爱</span><span class="v">96部</span></div>
+      <div class="hot-item"><span class="num">3</span><span class="t">NTR</span><span class="v">84部</span></div>
+      <div class="hot-item"><span class="num">4</span><span class="t">职场</span><span class="v">132部</span></div>
+      <div class="hot-item"><span class="num">5</span><span class="t">校园</span><span class="v">110部</span></div>
+      <div class="hot-item"><span class="num">6</span><span class="t">短篇合集</span><span class="v">87部</span></div>
+    </div>
+    <div class="side-card">
+      <h3>站内数据</h3>
+      <div class="hot-item"><span class="t">收录作品</span><span class="v">1286 部</span></div>
+      <div class="hot-item"><span class="t">11月8日更新</span><span class="v">14 部</span></div>
+      <div class="hot-item"><span class="t">用户短评</span><span class="v">3620 条</span></div>
+      <div class="hot-item"><span class="t">榜单刷新</span><span class="v">每日 06:00</span></div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-logo">久久艹久久日</div>
+        <p>亚洲成人视频与社区讨论聚合。内容覆盖2026年9月至11月，条目类型包括日本AV、国产原创、欧美精品、动漫里番与短篇合集，工作日每天更新一次，周末视厂牌发行情况加更。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <a href="/#featured">精选作品</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#rank">热度榜单</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读参考</h4>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+      <div class="footer-col">
+        <h4>社区互动</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#submit">投稿入口</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#overview">领域概览</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>内容为示例数据，仅用于栏目展示。本站不提供下载与播放服务，不设官方授权声明。</span>
+      <span>© 2026 久久艹久久日 · 示例页面</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  var hamburger = document.getElementById('hamburger');
+  var navClose = document.getElementById('navClose');
+  var overlay = document.getElementById('navOverlay');
+  var backTop = document.getElementById('backTop');
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var navLinks = nav.querySelectorAll('a');
+
+  function openNav(){
+    nav.classList.add('open');
+    overlay.classList.add('show');
+    hamburger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav(){
+    nav.classList.remove('open');
+    overlay.classList.remove('show');
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', function(){
+    if(nav.classList.contains('open')){ closeNav(); } else { openNav(); }
+  });
+  navClose.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeNav(); }
+  });
+  navLinks.forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 1024){ closeNav(); }
+    });
+  });
+
+  // 滚动高亮频道 + 回到顶部
+  var sections = document.querySelectorAll('main section[id]');
+  var channelLinks = document.querySelectorAll('.channel-sidebar a');
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var scrollY = window.scrollY;
+      if(scrollY > window.innerHeight * 0.8){
+        backTop.classList.add('show');
+      } else {
+        backTop.classList.remove('show');
+      }
+      var currentId = '';
+      sections.forEach(function(sec){
+        var top = sec.offsetTop - 120;
+        if(scrollY >= top){ currentId = sec.id; }
+      });
+      channelLinks.forEach(function(a){
+        a.classList.toggle('current', a.getAttribute('href') === '/#' + currentId);
+      });
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 本地搜索：过滤精选卡片
+  function doSearch(){
+    var q = searchInput.value.trim().toLowerCase();
+    var cards = document.querySelectorAll('.featured-card');
+    var found = 0;
+    cards.forEach(function(card){
+      var text = (card.getAttribute('data-search') || '') + ' ' + card.textContent.toLowerCase();
+      if(!q || text.indexOf(q) !== -1){
+        card.style.display = '';
+        found++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    var grid = document.querySelector('.featured-grid');
+    var oldMsg = document.getElementById('searchEmpty');
+    if(oldMsg) oldMsg.remove();
+    if(found === 0){
+      var msg = document.createElement('p');
+      msg.id = 'searchEmpty';
+      msg.style.cssText = 'grid-column:1/-1;text-align:center;padding:24px;color:var(--color-text-muted);font-size:14px;';
+      msg.textContent = '没有找到匹配「' + searchInput.value.trim() + '」的作品，换个关键词试试。';
+      grid.appendChild(msg);
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value.trim() === ''){ doSearch(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "久久艹久久日",
+  "description": "亚洲成人视频与社区内容聚合，覆盖日本AV、国产原创、欧美精品、动漫里番等分类，提供最新更新、作品看点与用户评论参考。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「人妻の秘密」第3话和第2话中间隔了多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第2话是10月19日上线，第3话11月8日，间隔20天。第1话到第2话只隔了11天，这次间隔偏长，S1没有给出官方说明，花絮里导演提过一句“补拍了两天”。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国产原创里哪些团队是稳定更新的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "南城影像的「夜班便利店」系列从9月至今出了四集，间隔7天、12天、19天，整体算稳；另一支团队「雾都制作」的都市系列更新间隔在两周左右，但每集时长不固定，60—90分钟都有。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "动漫里番的特典版和正片差在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「月下の契り」特典版比正片多8分钟，内容是分镜稿逐页解说，不是新增剧情。制作方官推贴出原画1140张，特典里能看到其中约200张的绘制顺序，对漫画改粉丝有价值，只想看正片的可以跳过。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "欧美精品为什么在站内数量少但评分高？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "收录量154部，占总量约12%，但单部评分中位数高于整体。原因是欧美厂牌Vixen等出品以4K拍摄和固定班底为主，单部制作周期长，更新慢，能进站的多数是已在外网有过口碑的作品，筛选门槛天然更高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "短篇合集适合什么场景看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「地铁通勤合集」这类六段独立短篇，每段15—18分钟，适合通勤或午休时段。缺点是段与段之间没有剧情关联，看到一半停下不需要记前情。第七段收音有瑕疵，介意的话从第一段看起。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "NTR系列第12弹的倒叙结构到底怎么排的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三段分别对应事件的前、后、中，播放顺序是后—中—前。开头看到的是事件结束后的场景，中段回到转折点，最后才交代起因。评论区有人建议按正常时间顺序自己跳着看，但这样会丢掉导演在每段开头埋的同一句台词。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+    </html>
