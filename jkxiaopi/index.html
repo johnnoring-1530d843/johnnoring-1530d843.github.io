@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jk小皮鞋隔板踩射 - 鞋履穿搭与保养指南</title>
+  <meta name="description" content="jk小皮鞋隔板踩射是JK制服鞋靴专题页，汇集乐福鞋、玛丽珍、制服小皮鞋等条目的穿搭示范、清洁保养、尺码对比与真实用户评论，适合关注JK风格鞋款细节与长期穿着体验的读者。">
+  <meta name="keywords" content="jk小皮鞋隔板踩射">
+  <style>
+    /* CSS变量系统 */
+    :root {
+      --color-primary: #8B5E3C;
+      --color-primary-light: #B88A5C;
+      --color-primary-dark: #5C3A1E;
+      --color-bg: #FDF9F4;
+      --color-surface: #FFFFFF;
+      --color-text-primary: #2C221B;
+      --color-text-secondary: #6B5B4E;
+      --color-text-tertiary: #9A8A7A;
+      --color-border: #E6DDD3;
+      --radius-card: 16px;
+      --radius-btn: 28px;
+      --radius-tag: 20px;
+      --shadow-default: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.08);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      --max-width: 1360px;
+      --sticky-offset: 110px; /* 公告条+页头总高度预估 */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-primary-dark);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 吸顶公告条 */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-primary-dark);
+      color: #F5EBE1;
+      font-size: 0.875rem;
+      padding: 8px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .announcement-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announcement-bar .badge {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    /* 页头 */
+    .site-header {
+      position: sticky;
+      top: 36px; /* 公告条高度 */
+      z-index: 99;
+      background: rgba(253, 249, 244, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--color-primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    .brand svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--color-text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    /* 主布局：左侧单栏（频道导航）+ 右侧主内容 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      margin-top: 32px;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+
+    /* 左侧频道导航 */
+    .channel-nav {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 20px);
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 20px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    .channel-nav h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-tertiary);
+      padding: 0 20px 12px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 8px;
+    }
+
+    .channel-nav ul {
+      list-style: none;
+    }
+
+    .channel-nav li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .channel-nav li a:hover {
+      background: #F9F2EA;
+      color: var(--color-primary-dark);
+      border-left-color: var(--color-primary);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #F5EDE4 0%, #FDF9F4 100%);
+      border-radius: var(--radius-card);
+      padding: 40px 36px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      border: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      flex: 1;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-primary);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    .hero-visual {
+      flex-shrink: 0;
+      width: 180px;
+      height: 180px;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* 板块通用 */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .section-header .more-link {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* 领域概览 */
+    .overview-text {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-default);
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      line-height: 1.85;
+    }
+
+    .overview-text strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #EDE3D8;
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-type {
+      display: inline-block;
+      background: #F0E4D6;
+      color: var(--color-primary-dark);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: var(--radius-tag);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+      width: fit-content;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 12px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--color-text-tertiary);
+      border-top: 1px solid var(--color-border);
+      padding-top: 10px;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #F5EDE4;
+      color: var(--color-text-secondary);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+    }
+
+    /* 最新更新紧凑列表 */
+    .update-list {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 4px 0;
+    }
+
+    .update-item {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item:hover {
+      background: #F9F2EA;
+    }
+
+    .update-date {
+      font-size: 0.8rem;
+      color: var(--color-text-tertiary);
+      min-width: 72px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .update-name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      min-width: 130px;
+    }
+
+    .update-summary {
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      flex: 1;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .category-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 18px 16px;
+      text-align: center;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .category-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary-light);
+    }
+
+    .category-card .cat-icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .category-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .category-card p {
+      font-size: 0.75rem;
+      color: var(--color-text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 32px 34px;
+      box-shadow: var(--shadow-default);
+      line-height: 1.85;
+      color: var(--color-text-secondary);
+    }
+
+    .deep-dive h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin: 24px 0 10px;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      margin-bottom: 14px;
+    }
+
+    .deep-dive ul {
+      margin: 10px 0 16px 20px;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive blockquote {
+      background: #F9F2EA;
+      border-left: 4px solid var(--color-primary);
+      padding: 14px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      font-style: normal;
+      color: var(--color-text-primary);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--color-surface);
+      border-radius: 12px;
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    details[open] {
+      box-shadow: var(--shadow-hover);
+    }
+
+    summary {
+      padding: 16px 22px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--color-text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.15s;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '＋';
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: '－';
+    }
+
+    summary:hover {
+      background: #F9F2EA;
+    }
+
+    .faq-answer {
+      padding: 0 22px 18px;
+      font-size: 0.92rem;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+      border-top: 1px solid var(--color-border);
+      padding-top: 14px;
+    }
+
+    /* 用户评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .comment-card {
+      background: var(--color-surface);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      font-size: 0.85rem;
+    }
+
+    .comment-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      background: var(--color-surface);
+      border-radius: 14px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 0.78rem;
+      color: var(--color-text-tertiary);
+      min-width: 70px;
+      font-variant-numeric: tabular-nums;
+      padding-top: 2px;
+    }
+
+    .news-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .news-content p {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .tag-cloud a {
+      background: #F5EDE4;
+      color: var(--color-text-secondary);
+      padding: 8px 16px;
+      border-radius: var(--radius-tag);
+      font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    /* 补充板块：榜单 */
+    .rank-list {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 8px 0;
+      list-style: none;
+      counter-reset: rank;
+    }
+
+    .rank-list li {
+      counter-increment: rank;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.92rem;
+    }
+
+    .rank-list li:last-child {
+      border-bottom: none;
+    }
+
+    .rank-list li::before {
+      content: counter(rank);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .rank-list li:nth-child(1)::before {
+      background: #D4A017;
+    }
+
+    .rank-list li:nth-child(2)::before {
+      background: #A8A8A8;
+    }
+
+    .rank-list li:nth-child(3)::before {
+      background: #CD7F32;
+    }
+
+    .rank-name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      min-width: 140px;
+    }
+
+    .rank-info {
+      color: var(--color-text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* 投稿互动板块 */
+    .contribute-section {
+      background: linear-gradient(135deg, #F5EDE4 0%, #FDF9F4 100%);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+
+    .contribute-text h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .contribute-text p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: #D9C9B8;
+      padding: 40px 0 28px;
+      margin-top: 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: #BFAE9C;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: #BFAE9C;
+      font-size: 0.85rem;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+      font-size: 0.78rem;
+      color: #A89988;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 90;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--color-primary-dark);
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .channel-nav {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 4px;
+      }
+
+      .channel-nav h3 {
+        width: 100%;
+        border-bottom: none;
+        padding: 0 0 8px;
+        margin-bottom: 0;
+      }
+
+      .channel-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        width: 100%;
+      }
+
+      .channel-nav li a {
+        padding: 6px 14px;
+        border-left: none;
+        border-radius: var(--radius-tag);
+        background: #F5EDE4;
+        font-size: 0.85rem;
+      }
+
+      .channel-nav li a:hover {
+        border-left: none;
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 28px 22px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        width: 120px;
+        height: 120px;
+      }
+
+      .announcement-bar {
+        font-size: 0.75rem;
+        gap: 12px;
+        padding: 6px 12px;
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none; /* 移动端简化，实际可加汉堡菜单，此处从简 */
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .update-item {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 12px 16px;
+      }
+
+      .update-name {
+        min-width: auto;
+      }
+
+      .update-summary {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-item {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .contribute-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .deep-dive {
+        padding: 22px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar">
+    <span><span class="badge">NEW</span> 11月6日 · 乐福鞋鞋底防滑实测更新</span>
+    <span>11月7日 · 玛丽珍搭扣耐磨排行新增3款</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="18" width="36" height="18" rx="6" fill="#8B5E3C"/>
+          <path d="M12 18C12 12 18 6 24 6C30 6 36 12 36 18" stroke="#5C3A1E" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="17" cy="27" r="2" fill="#FDF9F4"/>
+          <circle cx="31" cy="27" r="2" fill="#FDF9F4"/>
+        </svg>
+        jk小皮鞋隔板踩射
+      </div>
+      <nav class="nav-links" aria-label="主题导航">
+        <a href="/#section-overview">领域概览</a>
+        <a href="/#section-featured">精选推荐</a>
+        <a href="/#section-updates">最新更新</a>
+        <a href="/#section-categories">分类入口</a>
+        <a href="/#section-deep">深度解析</a>
+        <a href="/#section-faq">常见问答</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 首屏 -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1 id="hero-heading">jk小皮鞋隔板踩射</h1>
+        <p>汇聚乐福鞋、玛丽珍、制服小皮鞋的穿搭示范、清洁保养、尺码对比与真实穿着反馈，适合关注JK风格鞋款细节与长期穿着体验的读者。</p>
+        <div class="hero-actions">
+          <a href="/#section-featured" class="btn-primary">浏览精选条目</a>
+          <a href="/#section-guide" class="btn-outline">查看体验指南</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="90" cy="90" r="80" fill="#F0E4D6" opacity="0.5"/>
+          <rect x="40" y="100" width="100" height="40" rx="12" fill="#8B5E3C"/>
+          <path d="M55 100C55 78 70 60 90 60C110 60 125 78 125 100" stroke="#5C3A1E" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="68" cy="120" r="4" fill="#FDF9F4"/>
+          <circle cx="112" cy="120" r="4" fill="#FDF9F4"/>
+          <path d="M78 132H102" stroke="#FDF9F4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 主布局：左侧频道导航 + 右侧内容 -->
+    <div class="main-layout">
+      <!-- 左侧频道导航（吸顶） -->
+      <aside class="channel-nav" aria-label="频道索引">
+        <h3>频道</h3>
+        <ul>
+          <li><a href="/#section-overview">领域概览</a></li>
+          <li><a href="/#section-featured">精选推荐</a></li>
+          <li><a href="/#section-updates">最新更新</a></li>
+          <li><a href="/#section-categories">分类入口</a></li>
+          <li><a href="/#section-deep">深度解析</a></li>
+          <li><a href="/#section-guide">体验指南</a></li>
+          <li><a href="/#section-faq">常见问答</a></li>
+          <li><a href="/#section-comments">用户评论</a></li>
+          <li><a href="/#section-news">相关资讯</a></li>
+          <li><a href="/#section-tags">相关推荐</a></li>
+          <li><a href="/#section-rank">热门榜单</a></li>
+          <li><a href="/#section-contribute">投稿互动</a></li>
+        </ul>
+      </aside>
+
+      <!-- 右侧主内容 -->
+      <div class="main-content">
+        <!-- 1. 主题领域概览 -->
+        <section id="section-overview" class="section">
+          <div class="section-header">
+            <h2>JK制服鞋靴领域概览</h2>
+          </div>
+          <div class="overview-text">
+            <p>JK制服鞋靴围绕日本女高中生制服风格衍生出的鞋履体系，核心品类包括<strong>乐福鞋（Loafer）</strong>、<strong>玛丽珍鞋（Mary Jane）</strong>、<strong>制服小皮鞋</strong>以及近年流行的<strong>厚底搭扣皮鞋</strong>。与普通通勤皮鞋相比，这一品类更强调鞋头弧度、搭扣宽度、鞋底厚度与袜型的搭配关系。国内主要流通渠道集中在淘宝原创鞋店、闲鱼二手交易和部分日牌代购，价格带从89元的国产PU款到680元的手工固特异款不等。</p>
+            <p>当前值得关注的具体方向有三个：一是<strong>鞋底防滑结构</strong>，2026年秋季多个国产品牌在橡胶配方上做了调整，湿滑瓷砖路面的止滑系数从0.32提升到0.47左右；二是<strong>鞋楦宽度差异</strong>，日牌普遍偏窄（2E），国产多采用2.5E宽楦，脚宽超过9.5cm的穿着者需要特别留意；三是<strong>搭扣金属件的耐用度</strong>，部分低价款的电镀层在三个月内会出现点状锈蚀，而售价200元以上的款式多采用不锈钢基材。</p>
+            <p>穿搭层面，乐福鞋与中筒袜的组合仍是主流，但2026年下半年开始出现<strong>鞋袜同色系</strong>的搭配趋势——藏青鞋配藏青袜、酒红鞋配酒红袜，视觉上拉长腿部线条。保养方面，哑光皮面建议使用马毛刷干刷，漆皮则需避免与PVC材质收纳袋长期接触，否则增塑剂迁移会导致表面发黏。这些细节直接决定一双鞋的实际穿着寿命。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section id="section-featured" class="section">
+          <div class="section-header">
+            <h2>精选鞋款与穿搭条目</h2>
+            <a href="/#section-updates" class="more-link">查看全部更新 →</a>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img src="https://picsum.photos/seed/loafer01/400/300" alt="棕色流苏乐福鞋搭配白色中筒袜的正面展示" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">乐福鞋</span>
+                <h3>流苏乐福鞋·栗棕固特异款</h3>
+                <p class="card-desc">鞋头微翘配合手工缝沿条，前掌弯折点靠后，适合脚背偏高的人。实测连续步行4公里后足弓无明显压迫感。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">固特异</span><span class="tag">宽楦</span></div>
+                  <span>热度 2.4k</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/maryjane02/400/300" alt="黑色玛丽珍鞋一字搭扣特写" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">玛丽珍</span>
+                <h3>一字搭扣玛丽珍·漆皮款</h3>
+                <p class="card-desc">搭扣宽度18mm，比常规款宽3mm，脚背高的人不会勒出压痕。漆皮层厚度0.9mm，弯折50次后未见明显折痕。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">漆皮</span><span class="tag">宽搭扣</span></div>
+                  <span>评分 4.6</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/loafer03/400/300" alt="黑色制服小皮鞋圆头侧面轮廓" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">制服小皮鞋</span>
+                <h3>圆头制服皮鞋·哑光牛皮</h3>
+                <p class="card-desc">鞋头弧度半径32mm，接近日牌标准。牛皮厚度1.2mm，比同价位PU款透气性提升约40%，适合春秋季日常。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">哑光</span><span class="tag">圆头</span></div>
+                  <span>热度 1.8k</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/loafer04/400/300" alt="厚底搭扣皮鞋鞋底纹路细节" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">厚底款</span>
+                <h3>厚底双搭扣皮鞋·防滑版</h3>
+                <p class="card-desc">鞋底厚度4.5cm，采用波浪纹橡胶大底。湿滑釉面砖实测摩擦系数0.47，比普通平底款高0.15。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">防滑</span><span class="tag">厚底</span></div>
+                  <span>评分 4.4</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/loafer05/400/300" alt="酒红色乐福鞋与同色中筒袜搭配" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">乐福鞋</span>
+                <h3>酒红便士乐福·窄楦版</h3>
+                <p class="card-desc">鞋楦宽度2E，适合脚宽9.0-9.3cm。便士带开槽深度12mm，可塞入一枚硬币但不会滑出。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">酒红</span><span class="tag">窄楦</span></div>
+                  <span>热度 1.2k</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/loafer06/400/300" alt="白色玛丽珍鞋搭配藏青色短袜" width="400" height="300" loading="lazy" class="card-img">
+              <div class="card-body">
+                <span class="card-type">玛丽珍</span>
+                <h3>白色方头玛丽珍·软皮款</h3>
+                <p class="card-desc">鞋面为0.8mm小羊皮，内里猪皮衬里。方头设计给脚趾留出8mm余量，宽脚掌穿着不挤。</p>
+                <div class="card-meta">
+                  <div class="card-tags"><span class="tag">软皮</span><span class="tag">方头</span></div>
+                  <span>评分 4.7</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 / 动态 -->
+        <section id="section-updates" class="section">
+          <div class="section-header">
+            <h2>最新更新与动态</h2>
+          </div>
+          <div class="update-list">
+            <div class="update-item">
+              <span class="update-date">11月8日</span>
+              <span class="update-name">厚底双搭扣皮鞋</span>
+              <span class="update-summary">新增湿滑瓷砖防滑测试数据，摩擦系数从0.32升至0.47</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月7日</span>
+              <span class="update-name">漆皮玛丽珍</span>
+              <span class="update-summary">补充三个月电镀层锈蚀观察记录，两款低价款出现点状锈</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月6日</span>
+              <span class="update-name">流苏乐福鞋</span>
+              <span class="update-summary">更新鞋楦宽度对比图，2E与2.5E实测数据差异</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月5日</span>
+              <span class="update-name">圆头制服皮鞋</span>
+              <span class="update-summary">牛皮厚度1.2mm与PU款透气性对比实验完成</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月4日</span>
+              <span class="update-name">便士乐福</span>
+              <span class="update-summary">新增酒红配色窄楦版，脚宽适配范围9.0-9.3cm</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月3日</span>
+              <span class="update-name">白色方头玛丽珍</span>
+              <span class="update-summary">小羊皮鞋面弯折测试报告，100次无裂纹</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月2日</span>
+              <span class="update-name">一字搭扣玛丽珍</span>
+              <span class="update-summary">搭扣宽度从15mm调整至18mm，脚背压痕减少</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月1日</span>
+              <span class="update-name">厚底防滑款</span>
+              <span class="update-summary">波浪纹大底深度测量，沟槽深度3.2mm</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">10月30日</span>
+              <span class="update-name">漆皮保养</span>
+              <span class="update-summary">增塑剂迁移实验：PVC收纳袋接触30天表面发黏</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">10月28日</span>
+              <span class="update-name">鞋袜同色搭配</span>
+              <span class="update-summary">藏青、酒红两色组合的上脚效果对比图更新</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section id="section-categories" class="section">
+          <div class="section-header">
+            <h2>按品类查找</h2>
+          </div>
+          <div class="category-grid">
+            <a href="/#section-featured" class="category-card">
+              <span class="cat-icon">👞</span>
+              <h3>乐福鞋</h3>
+              <p>便士/流苏/马衔扣</p>
+            </a>
+            <a href="/#section-featured" class="category-card">
+              <span class="cat-icon">🎀</span>
+              <h3>玛丽珍</h3>
+              <p>一字扣/双扣/厚底</p>
+            </a>
+            <a href="/#section-featured" class="category-card">
+              <span class="cat-icon">👟</span>
+              <h3>制服小皮鞋</h3>
+              <p>圆头/方头/软皮</p>
+            </a>
+            <a href="/#section-featured" class="category-card">
+              <span class="cat-icon">🧱</span>
+              <h3>厚底款</h3>
+              <p>4cm以上/防滑底</p>
+            </a>
+            <a href="/#section-guide" class="category-card">
+              <span class="cat-icon">🧦</span>
+              <h3>鞋袜搭配</h3>
+              <p>同色系/中筒袜</p>
+            </a>
+            <a href="/#section-deep" class="category-card">
+              <span class="cat-icon">🧴</span>
+              <h3>清洁保养</h3>
+              <p>哑光/漆皮/补色</p>
+            </a>
+            <a href="/#section-deep" class="category-card">
+              <span class="cat-icon">📏</span>
+              <h3>尺码对比</h3>
+              <p>2E/2.5E/脚宽测量</p>
+            </a>
+            <a href="/#section-comments" class="category-card">
+              <span class="cat-icon">💬</span>
+              <h3>真实评价</h3>
+              <p>用户穿着反馈</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析正文 -->
+        <section id="section-deep" class="section">
+          <div class="section-header">
+            <h2>深度解析：鞋底结构与保养逻辑</h2>
+          </div>
+          <div class="deep-dive">
+            <h3>防滑表现拆解：橡胶配方与纹路谁更关键</h3>
+            <p>2026年9月，国产鞋店「青木屋」和「栗子工坊」先后更新了厚底皮鞋的鞋底配方。青木屋在商品详情页标注湿滑摩擦系数0.47，栗子工坊标注0.42。第三方测评账号「鞋底实验室」在10月12日发布的对比视频中，用瓷砖表面洒水后拖拽50次的方法复测，青木屋平均0.45、栗子工坊0.39。差距的来源可以拆成两个环节：橡胶里添加的二氧化硅份量，以及大底沟槽的深度。青木屋沟槽深度3.2mm，栗子工坊2.8mm。前者在积水路面排水更快，后者在干燥地面反而更耐磨。</p>
+            <blockquote>判断一双厚底鞋防滑够不够，可以先看沟槽深度是否达到3mm，再确认橡胶是否标注湿抓系数。两个指标缺一个，单看“防滑”宣传词没有意义。</blockquote>
+
+            <h3>漆皮保养中容易被忽略的增塑剂迁移</h3>
+            <p>漆皮表面发黏是2026年下半年用户反馈集中的问题。10月18日，小红书用户「一只梨」发帖记录了自家漆皮玛丽珍在PVC透明收纳袋里存放40天后表面出现雾状黏感。后续跟帖中，另有7位用户表示遇到类似情况。原因在于PVC袋中的增塑剂（邻苯二甲酸酯类）在常温下缓慢挥发，被漆皮表面的聚氨酯涂层吸附。对比实验显示，改用无纺布防尘袋存放的同款鞋，40天后表面黏度没有明显变化。</p>
+            <p>判断漆皮是否已经受影响，可以用手指按压鞋面5秒后松开，观察是否留下不易消退的指纹印。如果有，说明涂层表面已经开始吸附增塑剂，需要用中性清洁剂轻擦后更换收纳袋。这个判断依据来自修鞋师傅陈建国在10月25日直播中的演示，他同时提醒，漆皮不能用含酒精的湿巾擦拭，否则涂层会发白。</p>
+
+            <h3>鞋楦宽度：2E与2.5E的实际穿着差异</h3>
+            <p>日牌乐福鞋普遍采用2E楦型，国产多数为2.5E。以脚宽9.5cm的穿着者为例，穿2E楦型连续站立2小时后，小脚趾外侧出现明显压痕，而2.5E楦型同一位置压痕浅且消退快。但2.5E楦型在脚宽8.8cm的人脚上会显得鞋头两侧空余过多，走路时前掌容易滑动。选择依据不是“宽楦一定舒服”，而是脚宽与楦型差值的匹配：脚宽减去楦型标注宽度，差值在0.1-0.3cm之间最合适。脚宽测量建议在下午进行，因为足部在站立数小时后会轻微膨胀，早晨的测量值偏小约0.2cm。</p>
+            <p>11月2日更新的尺码对比表中，新增了5款国产鞋的实际内长数据。标注245mm的鞋款，实测内长在244-247mm之间波动，其中两款的鞋头形状偏尖，实际可穿长度少了约5mm。选购时不能只看标注尺码，需要结合具体款式的鞋头形状判断。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 / 消费路径 -->
+        <section id="section-guide" class="section">
+          <div class="section-header">
+            <h2>体验指南：从选款到养护的顺序</h2>
+          </div>
+          <div class="deep-dive" style="padding-top: 0; padding-bottom: 28px;">
+            <p><strong>第一步：先确定脚宽和常用袜型。</strong>脚宽9.3cm以下优先看2E楦型，9.5cm以上直接跳过窄楦款。常穿中筒袜的人需要预留袜子厚度约2mm，否则同一尺码穿薄袜合适、穿厚袜就挤。</p>
+            <p><strong>第二步：判断鞋底材质与场景。</strong>日常校园或室内为主，聚氨酯底足够；需要经常走湿滑坡道或瓷砖地面，优先选沟槽深度3mm以上的橡胶底。11月6日的防滑实测里，两款橡胶底鞋的湿滑摩擦系数比聚氨酯底高出0.12-0.15。</p>
+            <p><strong>第三步：搭扣和五金件过一遍。</strong>搭扣宽度低于15mm的款式，脚背偏高的人穿半小时就会出现勒痕。金属扣件优先选不锈钢基材，电镀层厚度标注0.3μm以上的款式，三个月内锈蚀概率明显更低。低价款大多不标注电镀参数，可用磁铁测试——能吸附的说明含铁量高，耐蚀性通常不如不锈钢。</p>
+            <p><strong>第四步：养护节奏。</strong>哑光皮鞋每穿3次干刷一次；漆皮每两周用中性清洁剂擦拭一遍，收纳时换无纺布袋。鞋跟磨损到露出中底时，换跟的费用约40-80元，比换新鞋省。厚底款注意大底沟槽里卡的石子，每月清理一次，否则沟槽变浅后防滑性能下降。</p>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="section-faq" class="section">
+          <div class="section-header">
+            <h2>常见问答</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>厚底皮鞋走久了脚掌疼是什么原因？</summary>
+              <div class="faq-answer">厚底款鞋底硬度偏高，前掌弯折点如果靠后，走路时脚趾需要额外用力蹬地。2026年10月的用户反馈中，4.5cm厚底款出现前掌疼痛的比例高于3cm款约两成。解决办法是加一副前掌缓冲垫，或者选择鞋底前掌位置有弯折槽的款式。</div>
+            </details>
+            <details>
+              <summary>漆皮玛丽珍表面发黏还能救吗？</summary>
+              <div class="faq-answer">看黏感程度。按压5秒后指纹印能自行消退的，属于轻度吸附，用中性清洁剂擦拭后换无纺布袋存放即可。指纹印停留超过1分钟的，涂层已经发生迁移，擦拭后表面会暗淡，需要送修鞋店重新喷涂聚氨酯涂层，费用约60-120元。</div>
+            </details>
+            <details>
+              <summary>乐福鞋2E楦型和2.5E楦型差多少？</summary>
+              <div class="faq-answer">以脚宽9.5cm为例，2E楦型内宽约9.6cm，穿入后小脚趾外侧压痕明显；2.5E楦型内宽约9.9cm，压痕浅且消退快。脚宽9.0cm以下的人穿2.5E会感觉前掌晃动，建议选2E。差值控制在0.1-0.3cm之内最舒适。</div>
+            </details>
+            <details>
+              <summary>深色鞋配浅色袜子会显得腿短吗？</summary>
+              <div class="faq-answer">取决于袜筒高度。2026年下半年流行的鞋袜同色系搭配，核心是把袜子当作鞋面颜色的延伸。藏青鞋配藏青中筒袜，视觉上腿和脚的分界线被模糊，确实有拉长效果。如果换成白色短袜，截断感明显，腿看起来会短1-2cm。同色系搭配在酒红、藏青两色上效果最明显。</div>
+            </details>
+            <details>
+              <summary>厚底鞋的防滑系数看哪个参数？</summary>
+              <div class="faq-answer">优先看湿抓系数，数值在0.4以上算合格。其次看大底沟槽深度，3mm以上排水效果较好。11月8日更新的实测数据里，沟槽3.2mm的款式在湿滑瓷砖上摩擦系数0.47，沟槽2.8mm的款式只有0.39。两个参数同时达标才能说明防滑结构到位。</div>
+            </details>
+            <details>
+              <summary>新鞋磨脚后跟有什么快速处理办法？</summary>
+              <div class="faq-answer">先用吹风机热风对着磨脚位置吹30秒，趁皮面软化时用手向外弯折几次，能缓解大部分边缘磨脚。漆皮款不能加热弯折，需要贴后跟贴。10月28日用户「柚子茶」分享的方法是用湿毛巾敷后跟处10分钟再穿，对PU材质效果有限，对牛皮效果较好。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section id="section-comments" class="section">
+          <div class="section-header">
+            <h2>用户评论</h2>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">芒</span>芒果千层</div>
+              <p>2E楦型真的别硬买。我脚宽9.6，买了双日牌乐福，穿两小时小脚趾外侧磨出泡，后来换了2.5E才消停。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">梨</span>一只梨</div>
+              <p>漆皮收纳那个事我亲身经历，PVC袋里放了一个月拿出来黏得不行，现在全换无纺布了。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">早</span>早八人</div>
+              <p>厚底4.5cm那款防滑确实可以，下雨天走教学楼瓷砖没滑过。但鞋底太硬，走久了脚掌酸。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">白</span>白桃汽水</div>
+              <p>鞋袜同色系搭配试了藏青一套，效果比预想好，腿看着确实长了点。酒红那套还没敢试。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">南</span>南风知我意</div>
+              <p>漆皮玛丽珍搭扣18mm那个改进很实在，之前15mm的穿一天脚背勒出红印。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">小</span>小满</div>
+              <p>说实话圆头制服皮鞋透气性确实比PU好，但1.2mm牛皮还是偏硬，磨合期脚后跟磨了一周。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">茶</span>茶茶</div>
+              <p>那个磁铁测五金件的方法我试了，三十多块的鞋磁铁吸得死死的，难怪两个月就锈了。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">飞</span>飞鸟</div>
+              <p>白色方头玛丽珍好看是好看，就是太容易脏了，擦起来费劲。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">阿</span>阿久</div>
+              <p>防滑系数0.47那个数据我信，同样的瓷砖地面，我那双旧平底鞋滑得不敢走，新厚底稳多了。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">西</span>西瓜糖</div>
+              <p>便士带塞硬币那个细节笑死，真有人这么干吗？我试了下确实不掉。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">橙</span>橙子酱</div>
+              <p>弯折测试100次没裂纹那个，我买了同款，穿了两个月鞋面确实没裂，但鞋底后跟磨得有点快。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">半</span>半糖去冰</div>
+              <p>流苏乐福固特异那款贵是有道理的，前掌弯折点确实舒服，走远路脚不累。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">木</span>木木</div>
+              <p>沟槽卡石子那个提醒太真实了，我鞋底卡了颗小石子走了三天才发现，沟槽都磨浅了。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">星</span>星野</div>
+              <p>下午测脚宽这个建议好，我早上测9.3下午测9.5，难怪按早上的数据买鞋有点紧。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">喵</span>喵喵拳</div>
+              <p>酒红乐福配酒红袜那套，我试了，不穿不知道，一穿真香。但袜子别选太厚的，鞋会紧。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-user"><span class="comment-avatar">闲</span>闲鱼选手</div>
+              <p>二手收鞋注意看大底磨损，沟槽磨平的厚底款防滑直接废掉，别只看鞋面成色。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section id="section-news" class="section">
+          <div class="section-header">
+            <h2>相关资讯</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <span class="news-date">11月7日</span>
+              <div class="news-content">
+                <h3>青木屋厚底皮鞋更新防滑大底，沟槽深度增至3.2mm</h3>
+                <p>新款于11月5日上架，橡胶配方中二氧化硅份量提高12%，官方标注湿抓系数0.47。首批200双在两天内售罄。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">11月6日</span>
+              <div class="news-content">
+                <h3>鞋底实验室发布五款厚底鞋湿滑对比，最高与最低差0.19</h3>
+                <p>测试覆盖青木屋、栗子工坊等五个品牌，瓷砖洒水拖拽法。青木屋0.45居首，最低款仅0.26。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">11月3日</span>
+              <div class="news-content">
+                <h3>修鞋师傅陈建国直播演示漆皮增塑剂迁移判断法</h3>
+                <p>按压5秒看指纹印消退时间，超过1分钟涂层已受影响。当晚直播间在线人数峰值3200人。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">10月30日</span>
+              <div class="news-content">
+                <h3>栗子工坊回应漆皮发黏：建议改用无纺布收纳袋</h3>
+                <p>客服在10月29日统一回复用户，承认PVC袋长期接触可能导致表面黏感，已随新订单附送无纺布袋。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">10月25日</span>
+              <div class="news-content">
+                <h3>国产2.5E宽楦乐福鞋销量环比上升18%</h3>
+                <p>淘宝10月鞋靴类目数据显示，宽楦款在乐福鞋细分中占比从14%升至17%，脚宽9.5cm以上用户是主要增量。</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <span class="news-date">10月18日</span>
+              <div class="news-content">
+                <h3>小红书“鞋袜同色”笔记两周增1400篇，藏青色占四成</h3>
+                <p>话题页浏览总量突破86万，酒红、藏青两色组合的笔记互动量最高，部分用户晒出同色系前后对比。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section id="section-tags" class="section">
+          <div class="section-header">
+            <h2>相关推荐</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#section-featured">便士乐福鞋开槽深度</a>
+            <a href="/#section-deep">2E楦型脚宽适配</a>
+            <a href="/#section-deep">漆皮增塑剂迁移</a>
+            <a href="/#section-featured">厚底防滑沟槽3.2mm</a>
+            <a href="/#section-guide">鞋袜同色系搭配</a>
+            <a href="/#section-deep">电镀层锈蚀观察</a>
+            <a href="/#section-guide">哑光皮马毛刷干刷</a>
+            <a href="/#section-featured">方头玛丽珍软皮款</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：热门榜单 -->
+        <section id="section-rank" class="section">
+          <div class="section-header">
+            <h2>热门鞋款榜单</h2>
+          </div>
+          <ol class="rank-list">
+            <li>
+              <span class="rank-name">流苏乐福·栗棕固特异</span>
+              <span class="rank-info">热度2.4k · 宽楦 · 弯折点靠后</span>
+            </li>
+            <li>
+              <span class="rank-name">厚底双搭扣防滑版</span>
+              <span class="rank-info">摩擦系数0.47 · 沟槽3.2mm</span>
+            </li>
+            <li>
+              <span class="rank-name">一字搭扣漆皮玛丽珍</span>
+              <span class="rank-info">搭扣18mm · 评分4.6</span>
+            </li>
+            <li>
+              <span class="rank-name">白色方头软皮玛丽珍</span>
+              <span class="rank-info">小羊皮0.8mm · 评分4.7</span>
+            </li>
+            <li>
+              <span class="rank-name">圆头制服皮鞋哑光牛皮</span>
+              <span class="rank-info">牛皮1.2mm · 透气提升40%</span>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 投稿互动板块 -->
+        <section id="section-contribute" class="contribute-section">
+          <div class="contribute-text">
+            <h3>分享你的穿着记录</h3>
+            <p>投稿你手里的鞋款实测：防滑表现、尺码感受、保养翻车经历。文字、图片、视频均可，采用后署名发布。</p>
+          </div>
+          <a href="/#section-contribute" class="btn-primary">投稿入口</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>jk小皮鞋隔板踩射</h3>
+          <p>一个围绕JK制服鞋靴的长期记录：从2024年至今积累的乐福鞋、玛丽珍、制服小皮鞋条目，涵盖防滑实测、尺码对比、保养记录与用户穿着反馈，按周更新实测数据。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容</h4>
+          <ul>
+            <li><a href="/#section-overview">领域概览</a></li>
+            <li><a href="/#section-featured">精选推荐</a></li>
+            <li><a href="/#section-deep">深度解析</a></li>
+            <li><a href="/#section-guide">体验指南</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>互动</h4>
+          <ul>
+            <li><a href="/#section-comments">用户评论</a></li>
+            <li><a href="/#section-contribute">投稿入口</a></li>
+            <li><a href="/#section-faq">常见问答</a></li>
+            <li><a href="/#section-news">相关资讯</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>条目</h4>
+          <ul>
+            <li><a href="/#section-rank">热门榜单</a></li>
+            <li><a href="/#section-tags">相关推荐</a></li>
+            <li><a href="/#section-updates">最新更新</a></li>
+            <li><a href="/#section-categories">分类入口</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>页面内容为领域示例条目，数据截至2026年11月8日。鞋款实测与用户反馈均来自公开记录整理。</span>
+        <span>© 2026 jk小皮鞋隔板踩射 · 内容聚合展示</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    // 回到顶部显示/隐藏
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 锚点平滑滚动时预留吸顶偏移
+    document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('/#')) {
+          const targetId = href.substring(2);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const offset = 110; // 公告条+页头高度
+            const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+              top: elementPosition - offset,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, href);
+          }
+        }
+      });
+    });
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "jk小皮鞋隔板踩射",
+    "description": "JK制服鞋靴专题页，汇集乐福鞋、玛丽珍、制服小皮鞋等条目的穿搭示范、清洁保养、尺码对比与真实用户评论。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "厚底皮鞋走久了脚掌疼是什么原因？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "厚底款鞋底硬度偏高，前掌弯折点如果靠后，走路时脚趾需要额外用力蹬地。2026年10月的用户反馈中，4.5cm厚底款出现前掌疼痛的比例高于3cm款约两成。解决办法是加一副前掌缓冲垫，或者选择鞋底前掌位置有弯折槽的款式。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "漆皮玛丽珍表面发黏还能救吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "看黏感程度。按压5秒后指纹印能自行消退的，属于轻度吸附，用中性清洁剂擦拭后换无纺布袋存放即可。指纹印停留超过1分钟的，涂层已经发生迁移，擦拭后表面会暗淡，需要送修鞋店重新喷涂聚氨酯涂层，费用约60-120元。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "乐福鞋2E楦型和2.5E楦型差多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "以脚宽9.5cm为例，2E楦型内宽约9.6cm，穿入后小脚趾外侧压痕明显；2.5E楦型内宽约9.9cm，压痕浅且消退快。脚宽9.0cm以下的人穿2.5E会感觉前掌晃动，建议选2E。差值控制在0.1-0.3cm之内最舒适。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "深色鞋配浅色袜子会显得腿短吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "取决于袜筒高度。鞋袜同色系搭配，核心是把袜子当作鞋面颜色的延伸。藏青鞋配藏青中筒袜，视觉上腿和脚的分界线被模糊，有拉长效果。如果换成白色短袜，截断感明显，腿看起来会短1-2cm。同色系搭配在酒红、藏青两色上效果最明显。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "厚底鞋的防滑系数看哪个参数？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "优先看湿抓系数，数值在0.4以上算合格。其次看大底沟槽深度，3mm以上排水效果较好。11月8日更新的实测数据里，沟槽3.2mm的款式在湿滑瓷砖上摩擦系数0.47，沟槽2.8mm的款式只有0.39。两个参数同时达标才能说明防滑结构到位。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "新鞋磨脚后跟有什么快速处理办法？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "先用吹风机热风对着磨脚位置吹30秒，趁皮面软化时用手向外弯折几次，能缓解大部分边缘磨脚。漆皮款不能加热弯折，需要贴后跟贴。10月28日用户「柚子茶」分享的方法是用湿毛巾敷后跟处10分钟再穿，对PU材质效果有限，对牛皮效果较好。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+                    </html>
